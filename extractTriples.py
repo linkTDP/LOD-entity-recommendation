@@ -6,11 +6,9 @@ import threading
 from concurrent.futures.thread import ThreadPoolExecutor
 import concurrent.futures
 import logging
-from knoesis import mongoKnoesis
 import queryGenerator
 from SPARQLWrapper import SPARQLWrapper, XML, JSON
 import traceback
-import sparql.util as ut
 from pprint import pprint
 import mongoKnoesis
 import urllib2
@@ -470,7 +468,8 @@ def testDbpediaCOnnectedNodes(id):
     print ""
     
     print "total triples : "+str(len(graph))
-    graph.serialize(destination='connect'+str(id)+'.ttl', format='turtle')
+    timestr = time.strftime("%Y%m%d-%H%M%S")
+    graph.serialize(destination='files/connect'+str(id)+'_'+timestr+'.ttl', format='turtle')
 
 source = 'http://dbpedia.org/resource/Scuderia_Ferrari'
 target = 'http://dbpedia.org/resource/Modena'
@@ -482,6 +481,8 @@ url2 = "http://www.miamiherald.com/news/nation-world/world/article27284962.html"
 url3 = "http://www.nytimes.com/2015/07/31/world/middleeast/us-trained-islamic-state-opponents-reported-kidnapped-in-syria.html?_r=0"
 
 #getConnectedDbpedia(1,source,target)
+
+#print getAnnotation(getTextArticleByUrl(url3))
 
 testDbpediaCOnnectedNodes(3)
 

@@ -2,7 +2,7 @@ import rdflib
 from rdflib import Graph
 import networkx as nx
 import matplotlib.pyplot as plt
-import knoesis.mongoKnoesis
+import mongoKnoesis
 
 
 
@@ -32,6 +32,6 @@ def traslateGraphFromFile(filename,targetFileName,setStartingNodes=None):
     
     
     
-traslateGraphFromFile("connect2V2.ttl", "2id2stepsV2", knoesis.mongoKnoesis.getArticleById(2)['entitySet'])    
+traslateGraphFromFile("files/connect2V2.ttl", "files/2id2stepsV2", mongoKnoesis.getArticleById(2)['entitySet'])    
 
 
