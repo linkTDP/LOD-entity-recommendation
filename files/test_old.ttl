@@ -1,0 +1,4653 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix gn: <http://www.geonames.org/ontology#> .
+@prefix mrel: <http://id.loc.gov/vocabulary/relators/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix wgs84_pos: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://sws.geonames.org/10069933/> a gn:Feature ;
+    gn:name "Hotel Summit Residency Airport Hotel" ;
+    gn:nearby <http://sws.geonames.org/1283240/> ;
+    rdfs:isDefinedBy <http://sws.geonames.org/10069933/about.rdf> .
+
+<http://sws.geonames.org/10070270/> a gn:Feature ;
+    gn:name "Del' Annapurna" ;
+    gn:nearby <http://sws.geonames.org/1283240/> ;
+    rdfs:isDefinedBy <http://sws.geonames.org/10070270/about.rdf> .
+
+<http://sws.geonames.org/10289853/> a gn:Feature ;
+    gn:name "Crowne Plaza Hotel Kathmandu Soaltee" ;
+    gn:nearby <http://sws.geonames.org/1283240/> ;
+    rdfs:isDefinedBy <http://sws.geonames.org/10289853/about.rdf> .
+
+<http://sws.geonames.org/10339675/> a gn:Feature ;
+    gn:name "Radisson Hotel Kathmandu" ;
+    gn:nearby <http://sws.geonames.org/1283240/> ;
+    rdfs:isDefinedBy <http://sws.geonames.org/10339675/about.rdf> .
+
+<http://sws.geonames.org/10339677/> a gn:Feature ;
+    gn:name "Airport Kathmandu" ;
+    gn:nearby <http://sws.geonames.org/1283240/> ;
+    rdfs:isDefinedBy <http://sws.geonames.org/10339677/about.rdf> .
+
+<http://sws.geonames.org/7814362/> a gn:Feature ;
+    gn:name "KathmanduN.P.31" ;
+    gn:nearby <http://sws.geonames.org/1283240/> ;
+    rdfs:isDefinedBy <http://sws.geonames.org/7814362/about.rdf> .
+
+<http://sws.geonames.org/7962226/> a gn:Feature ;
+    gn:name "Bhrikuti Mandap" ;
+    gn:nearby <http://sws.geonames.org/1283240/> ;
+    rdfs:isDefinedBy <http://sws.geonames.org/7962226/about.rdf> .
+
+<http://sws.geonames.org/9963339/> a gn:Feature ;
+    gn:name "Yak & Yeti" ;
+    gn:nearby <http://sws.geonames.org/1283240/> ;
+    rdfs:isDefinedBy <http://sws.geonames.org/9963339/about.rdf> .
+
+<http://sws.geonames.org/9963345/> a gn:Feature ;
+    gn:name "Tibet International" ;
+    gn:nearby <http://sws.geonames.org/1283240/> ;
+    rdfs:isDefinedBy <http://sws.geonames.org/9963345/about.rdf> .
+
+<http://www.geonames.org/ontology> a owl:Ontology ;
+    cc:license <http://creativecommons.org/licenses/by/3.0/> ;
+    dcterms:contributor "Erik Bolstad (norwegian and swedish translations)",
+        "Roman Rachkov (bulgarian translation)",
+        "Valery Hronusov (russian translation)" ;
+    dcterms:creator <http://data.semanticweb.org/person/bernard-vatant> ;
+    dcterms:description "The Geonames ontologies provides elements of description for geographical features, in particular those defined in the geonames.org data base"@en ;
+    dcterms:issued "2006-10-14" ;
+    dcterms:modified "2012-10-29" ;
+    dcterms:publisher <http://dbpedia.org/resource/GeoNames> ;
+    dcterms:title "The Geonames ontology"@en ;
+    vann:preferredNamespacePrefix "gn" ;
+    vann:preferredNamespaceUri "http://www.geonames.org/ontology#" ;
+    rdfs:comment """Modifications from version 3.01 :
+            Added : gn:GeonamesFeature, subclass of gn:Feature.
+            Added : explicit property gn:geonamesID, mandatory and unique for each gn:GeonamesFeature instance.
+            Deleted : owl:FunctionalProperty declarations for properties attached to gn:Feature, replaced by local cardinality restrictions on gn:GeonamesFeature
+            The gn:Feature class and attached properties can therefore be used in the open world for features not necessarily identified in the Geonames data base, or with partial descriptions.
+            Modified : Equivalent classes and superclasses of geonames:Feature in other vocabularies.
+            Added : new feature codes for historical features.
+            Improved metadata.
+      """@en ;
+    rdfs:isDefinedBy <http://www.geonames.org/ontology/ontology_v3.1.rdf> ;
+    owl:priorVersion <http://www.geonames.org/ontology/ontology_v3.0.1.rdf> ;
+    owl:versionInfo "Version 3.1 - 2012-10-29"@en ;
+    adms:relatedDocumentation <http://www.geonames.org/ontology/documentation.html> ;
+    foaf:homepage <http://www.geonames.org/ontology/documentation.html> .
+
+gn:A.ADM1H a gn:Code ;
+    skos:historyNote "Added in v3.1"@en ;
+    skos:inScheme gn:A ;
+    skos:notation "A.ADM1H" ;
+    skos:prefLabel "historical first-order administrative division"@en .
+
+gn:A.ADM2H a gn:Code ;
+    skos:historyNote "Added in v3.1"@en ;
+    skos:inScheme gn:A ;
+    skos:notation "A.ADM2H" ;
+    skos:prefLabel "historical second-order administrative division"@en .
+
+gn:A.ADM3H a gn:Code ;
+    skos:historyNote "Added in v3.1"@en ;
+    skos:inScheme gn:A ;
+    skos:notation "A.ADM3H" ;
+    skos:prefLabel "historical third-order administrative division"@en .
+
+gn:A.ADM4H a gn:Code ;
+    skos:historyNote "Added in v3.1"@en ;
+    skos:inScheme gn:A ;
+    skos:notation "A.ADM4H" ;
+    skos:prefLabel "historical fourth-order administrative division"@en .
+
+gn:A.ADM5 a gn:Code ;
+    skos:definition "a subdivision of a fourth-order administrative division"@en ;
+    skos:notation "A.ADM5" ;
+    skos:prefLabel "fifth-order administrative division"@en .
+
+gn:A.ADMD a gn:Code ;
+    skos:definition "an administrative division of a country, undifferentiated as to administrative level"@en ;
+    skos:inScheme gn:A ;
+    skos:notation "A.ADMD" ;
+    skos:prefLabel "administrative division"@en .
+
+gn:A.ADMH a gn:Code ;
+    skos:historyNote "Added in v3.1"@en ;
+    skos:inScheme gn:A ;
+    skos:notation "A.ADMH" ;
+    skos:prefLabel "historical administrative division"@en .
+
+gn:A.LTER a gn:Code ;
+    skos:definition "a tract of land leased to another country, usually for military installations"@en ;
+    skos:inScheme gn:A ;
+    skos:notation "A.LTER" ;
+    skos:prefLabel "leased area"@en .
+
+gn:A.PCL a gn:Code ;
+    skos:inScheme gn:A ;
+    skos:notation "A.PCL" ;
+    skos:prefLabel "political entity"@en .
+
+gn:A.PCLD a gn:Code ;
+    skos:inScheme gn:A ;
+    skos:notation "A.PCLD" ;
+    skos:prefLabel "dependent political entity"@en .
+
+gn:A.PCLF a gn:Code ;
+    skos:inScheme gn:A ;
+    skos:notation "A.PCLF" ;
+    skos:prefLabel "freely associated state"@en .
+
+gn:A.PCLH a gn:Code ;
+    skos:historyNote "Added in v3.1"@en ;
+    skos:inScheme gn:A ;
+    skos:notation "A.PCLH" ;
+    skos:prefLabel "historical political entity"@en .
+
+gn:A.PCLIX a gn:Code ;
+    skos:inScheme gn:A ;
+    skos:notation "A.PCLIX" ;
+    skos:prefLabel "section of independent political entity"@en .
+
+gn:A.PCLS a gn:Code ;
+    skos:inScheme gn:A ;
+    skos:notation "A.PCLS" ;
+    skos:prefLabel "semi-independent political entity"@en .
+
+gn:A.PPCLH a gn:Code ;
+    skos:historyNote "Added in v3.1"@en ;
+    skos:inScheme gn:P ;
+    skos:notation "A.PPCLH" ;
+    skos:prefLabel "historical capital of a political entity"@en .
+
+gn:A.PPLH a gn:Code ;
+    skos:historyNote "Added in v3.1"@en ;
+    skos:inScheme gn:P ;
+    skos:notation "A.PPLH" ;
+    skos:prefLabel "historical populated place"@en .
+
+gn:A.PRSH a gn:Code ;
+    skos:definition "an ecclesiastical district"@en ;
+    skos:inScheme gn:A ;
+    skos:notation "A.PRSH" ;
+    skos:prefLabel "parish"@en .
+
+gn:A.TERR a gn:Code ;
+    skos:inScheme gn:A ;
+    skos:notation "A.TERR" ;
+    skos:prefLabel "territory"@en .
+
+gn:A.ZN a gn:Code ;
+    skos:inScheme gn:A ;
+    skos:notation "A.ZN" ;
+    skos:prefLabel "zone"@en .
+
+gn:A.ZNB a gn:Code ;
+    skos:definition "a zone recognized as a buffer between two nations in which military presence is minimal or absent"@en ;
+    skos:inScheme gn:A ;
+    skos:notation "A.ZNB" ;
+    skos:prefLabel "buffer zone"@en .
+
+gn:GeonamesFeature a owl:Class ;
+    rdfs:label "Geonames Feature"@en ;
+    rdfs:comment "A feature described in geonames database, uniquely defined by its geonames identifier"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty wgs84_pos:long ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty gn:geonamesID ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty gn:population ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty gn:countryCode ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty gn:parentADM2 ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty wgs84_pos:lat ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty gn:parentADM2 ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty wgs84_pos:lat ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty gn:name ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty gn:parentADM4 ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty gn:name ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty gn:featureClass ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty gn:parentADM3 ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty gn:parentADM3 ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty gn:population ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty gn:featureCode ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty gn:featureCode ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty wgs84_pos:long ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty gn:parentADM1 ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty gn:parentADM4 ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty gn:parentADM1 ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty gn:geonamesID ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty gn:countryCode ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty gn:featureClass ],
+        gn:Feature ;
+    skos:historyNote "Added in version 3.1"@en .
+
+gn:H.AIRS a gn:Code ;
+    skos:definition "a place on a waterbody where floatplanes land and take off"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.AIRS" ;
+    skos:prefLabel "seaplane landing area"@en .
+
+gn:H.ANCH a gn:Code ;
+    skos:definition "an area where vessels may anchor"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.ANCH" ;
+    skos:prefLabel "anchorage"@en .
+
+gn:H.BAY a gn:Code ;
+    skos:definition "a coastal indentation between two capes or headlands, larger than a cove but smaller than a gulf"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.BAY" ;
+    skos:prefLabel "bay"@en .
+
+gn:H.BAYS a gn:Code ;
+    skos:definition "coastal indentations between two capes or headlands, larger than a cove but smaller than a gulf"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.BAYS" ;
+    skos:prefLabel "bays"@en .
+
+gn:H.BGHT a gn:Code ;
+    skos:definition "an open body of water forming a slight recession in a coastline"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.BGHT" ;
+    skos:prefLabel "bight(s)"@en .
+
+gn:H.BNK a gn:Code ;
+    skos:definition "an elevation, typically located on a shelf, over which the depth of water is relatively shallow but sufficient for most surface navigation"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.BNK" ;
+    skos:prefLabel "bank(s)"@en .
+
+gn:H.BNKR a gn:Code ;
+    skos:definition "a sloping margin of a stream channel which normally confines the stream to its channel on land"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.BNKR" ;
+    skos:prefLabel "stream bank"@en .
+
+gn:H.BNKX a gn:Code ;
+    skos:inScheme gn:H ;
+    skos:notation "H.BNKX" ;
+    skos:prefLabel "section of bank"@en .
+
+gn:H.BOG a gn:Code ;
+    skos:definition "a wetland characterized by peat forming sphagnum moss, sedge, and other acid-water plants"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.BOG" ;
+    skos:prefLabel "bog(s)"@en .
+
+gn:H.CAPG a gn:Code ;
+    skos:definition "a dome-shaped mass of glacial ice covering an area of  mountain summits or other high lands; smaller than an ice sheet"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.CAPG" ;
+    skos:prefLabel "icecap"@en .
+
+gn:H.CHN a gn:Code ;
+    skos:definition "the deepest part of a stream, bay, lagoon, or strait, through which the main current flows"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.CHN" ;
+    skos:prefLabel "channel"@en .
+
+gn:H.CHNL a gn:Code ;
+    skos:definition "that part of a lake having water deep enough for navigation between islands, shoals, etc."@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.CHNL" ;
+    skos:prefLabel "lake channel(s)"@en .
+
+gn:H.CHNM a gn:Code ;
+    skos:definition "that part of a body of water deep enough for navigation through an area otherwise not suitable"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.CHNM" ;
+    skos:prefLabel "marine channel"@en .
+
+gn:H.CHNN a gn:Code ;
+    skos:definition "a buoyed channel of sufficient depth for the safe navigation of vessels"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.CHNN" ;
+    skos:prefLabel "navigation channel"@en .
+
+gn:H.CNFL a gn:Code ;
+    skos:definition "a place where two or more streams or intermittent streams flow together"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.CNFL" ;
+    skos:prefLabel "confluence"@en .
+
+gn:H.CNL a gn:Code ;
+    skos:definition "an artificial watercourse"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.CNL" ;
+    skos:prefLabel "canal"@en .
+
+gn:H.CNLA a gn:Code ;
+    skos:definition "a conduit used to carry water"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.CNLA" ;
+    skos:prefLabel "aqueduct"@en .
+
+gn:H.CNLB a gn:Code ;
+    skos:definition "a conspicuously curved or bent section of a canal"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.CNLB" ;
+    skos:prefLabel "canal bend"@en .
+
+gn:H.CNLD a gn:Code ;
+    skos:definition "an artificial waterway carrying water away from a wetland or from drainage ditches"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.CNLD" ;
+    skos:prefLabel "drainage canal"@en .
+
+gn:H.CNLI a gn:Code ;
+    skos:definition "a canal which serves as a main conduit for irrigation water"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.CNLI" ;
+    skos:prefLabel "irrigation canal"@en .
+
+gn:H.CNLN a gn:Code ;
+    skos:definition "a watercourse constructed for navigation of vessels"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.CNLN" ;
+    skos:prefLabel "navigation canal(s)"@en .
+
+gn:H.CNLQ a gn:Code ;
+    skos:inScheme gn:H ;
+    skos:notation "H.CNLQ" ;
+    skos:prefLabel "abandoned canal"@en .
+
+gn:H.CNLSB a gn:Code ;
+    skos:definition "a gently inclined underground tunnel bringing water for irrigation from aquifers"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.CNLSB" ;
+    skos:prefLabel "underground irrigation canal(s)"@en .
+
+gn:H.CNLX a gn:Code ;
+    skos:inScheme gn:H ;
+    skos:notation "H.CNLX" ;
+    skos:prefLabel "section of canal"@en .
+
+gn:H.COVE a gn:Code ;
+    skos:definition "a small coastal indentation, smaller than a bay"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.COVE" ;
+    skos:prefLabel "cove(s)"@en .
+
+gn:H.CRKT a gn:Code ;
+    skos:definition "a meandering channel in a coastal wetland subject to bi-directional tidal currents"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.CRKT" ;
+    skos:prefLabel "tidal creek(s)"@en .
+
+gn:H.CRNT a gn:Code ;
+    skos:definition "a horizontal flow of water in a given direction with uniform velocity"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.CRNT" ;
+    skos:prefLabel "current"@en .
+
+gn:H.CUTF a gn:Code ;
+    skos:definition "a channel formed as a result of a stream cutting through a meander neck"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.CUTF" ;
+    skos:prefLabel "cutoff"@en .
+
+gn:H.DCK a gn:Code ;
+    skos:definition "a waterway between two piers, or cut into the land for the berthing of ships"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.DCK" ;
+    skos:prefLabel "dock(s)"@en .
+
+gn:H.DCKB a gn:Code ;
+    skos:definition "a part of a harbor where ships dock"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.DCKB" ;
+    skos:prefLabel "docking basin"@en .
+
+gn:H.DOMG a gn:Code ;
+    skos:definition "a comparatively elevated area on an icecap"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.DOMG" ;
+    skos:prefLabel "icecap dome"@en .
+
+gn:H.DPRG a gn:Code ;
+    skos:definition "a comparatively depressed area on an icecap"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.DPRG" ;
+    skos:prefLabel "icecap depression"@en .
+
+gn:H.DTCH a gn:Code ;
+    skos:definition "a small artificial watercourse dug for draining or irrigating the land"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.DTCH" ;
+    skos:prefLabel "ditch"@en .
+
+gn:H.DTCHD a gn:Code ;
+    skos:definition "a ditch which serves to drain the land"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.DTCHD" ;
+    skos:prefLabel "drainage ditch"@en .
+
+gn:H.DTCHI a gn:Code ;
+    skos:definition "a ditch which serves to distribute irrigation water"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.DTCHI" ;
+    skos:prefLabel "irrigation ditch"@en .
+
+gn:H.DTCHM a gn:Code ;
+    skos:definition "an area where a drainage ditch enters a lagoon, lake or bay"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.DTCHM" ;
+    skos:prefLabel "ditch mouth(s)"@en .
+
+gn:H.ESTY a gn:Code ;
+    skos:definition "a funnel-shaped stream mouth or embayment where fresh water mixes with sea water under tidal influences"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.ESTY" ;
+    skos:prefLabel "estuary"@en .
+
+gn:H.FISH a gn:Code ;
+    skos:definition "a fishing ground, bank or area where fishermen go to catch fish"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.FISH" ;
+    skos:prefLabel "fishing area"@en .
+
+gn:H.FJD a gn:Code ;
+    skos:definition "a long, narrow, steep-walled, deep-water arm of the sea at high latitudes, usually along mountainous coasts"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.FJD" ;
+    skos:prefLabel "fjord"@en .
+
+gn:H.FJDS a gn:Code ;
+    skos:definition "long, narrow, steep-walled, deep-water arms of the sea at high latitudes, usually along mountainous coasts"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.FJDS" ;
+    skos:prefLabel "fjords"@en .
+
+gn:H.FLLS a gn:Code ;
+    skos:definition "a perpendicular or very steep descent of the water of a stream"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.FLLS" ;
+    skos:prefLabel "waterfall(s)"@en .
+
+gn:H.FLLSX a gn:Code ;
+    skos:inScheme gn:H ;
+    skos:notation "H.FLLSX" ;
+    skos:prefLabel "section of waterfall(s)"@en .
+
+gn:H.FLTM a gn:Code ;
+    skos:definition "a relatively level area of mud either between high and low tide lines, or subject to flooding"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.FLTM" ;
+    skos:prefLabel "mud flat(s)"@en .
+
+gn:H.FLTT a gn:Code ;
+    skos:definition "a large flat area of mud or sand attached to the shore and alternately covered and uncovered by the tide"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.FLTT" ;
+    skos:prefLabel "tidal flat(s)"@en .
+
+gn:H.GLCR a gn:Code ;
+    skos:definition "a mass of ice, usually at high latitudes or high elevations, with sufficient thickness to flow away from the source area in lobes, tongues, or masses"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.GLCR" ;
+    skos:prefLabel "glacier(s)"@en .
+
+gn:H.GULF a gn:Code ;
+    skos:definition "a large recess in the coastline, larger than a bay"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.GULF" ;
+    skos:prefLabel "gulf"@en .
+
+gn:H.GYSR a gn:Code ;
+    skos:definition "a type of hot spring with intermittent eruptions of jets of hot water and steam"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.GYSR" ;
+    skos:prefLabel "geyser"@en .
+
+gn:H.HBR a gn:Code ;
+    skos:definition "a haven or space of deep water so sheltered by the adjacent land as to afford a safe anchorage for ships"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.HBR" ;
+    skos:prefLabel "harbor(s)"@en .
+
+gn:H.HBRX a gn:Code ;
+    skos:inScheme gn:H ;
+    skos:notation "H.HBRX" ;
+    skos:prefLabel "section of harbor"@en .
+
+gn:H.INLT a gn:Code ;
+    skos:definition "a narrow waterway extending into the land, or connecting a bay or lagoon with a larger body of water"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.INLT" ;
+    skos:prefLabel "inlet"@en .
+
+gn:H.INLTQ a gn:Code ;
+    skos:definition "an inlet which has been filled in, or blocked by deposits"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.INLTQ" ;
+    skos:prefLabel "former inlet"@en .
+
+gn:H.LBED a gn:Code ;
+    skos:definition "a dried up or drained area of a former lake"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.LBED" ;
+    skos:prefLabel "lake bed(s)"@en .
+
+gn:H.LGN a gn:Code ;
+    skos:definition "a shallow coastal waterbody, completely or partly separated from a larger body of water by a barrier island, coral reef or other depositional feature"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.LGN" ;
+    skos:prefLabel "lagoon"@en .
+
+gn:H.LGNS a gn:Code ;
+    skos:definition "shallow coastal waterbodies, completely or partly separated from a larger body of water by a barrier island, coral reef or other depositional feature"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.LGNS" ;
+    skos:prefLabel "lagoons"@en .
+
+gn:H.LGNX a gn:Code ;
+    skos:inScheme gn:H ;
+    skos:notation "H.LGNX" ;
+    skos:prefLabel "section of lagoon"@en .
+
+gn:H.LK a gn:Code ;
+    skos:definition "a large inland body of standing water"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.LK" ;
+    skos:prefLabel "lake"@en .
+
+gn:H.LKC a gn:Code ;
+    skos:definition "a lake in a crater or caldera"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.LKC" ;
+    skos:prefLabel "crater lake"@en .
+
+gn:H.LKI a gn:Code ;
+    skos:inScheme gn:H ;
+    skos:notation "H.LKI" ;
+    skos:prefLabel "intermittent lake"@en .
+
+gn:H.LKN a gn:Code ;
+    skos:definition "an inland body of salt water with no outlet"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.LKN" ;
+    skos:prefLabel "salt lake"@en .
+
+gn:H.LKNI a gn:Code ;
+    skos:inScheme gn:H ;
+    skos:notation "H.LKNI" ;
+    skos:prefLabel "intermittent salt lake"@en .
+
+gn:H.LKO a gn:Code ;
+    skos:definition "a crescent-shaped lake commonly found adjacent to meandering streams"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.LKO" ;
+    skos:prefLabel "oxbow lake"@en .
+
+gn:H.LKOI a gn:Code ;
+    skos:inScheme gn:H ;
+    skos:notation "H.LKOI" ;
+    skos:prefLabel "intermittent oxbow lake"@en .
+
+gn:H.LKS a gn:Code ;
+    skos:definition "large inland bodies of standing water"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.LKS" ;
+    skos:prefLabel "lakes"@en .
+
+gn:H.LKSB a gn:Code ;
+    skos:definition "a standing body of water in a cave"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.LKSB" ;
+    skos:prefLabel "underground lake"@en .
+
+gn:H.LKSC a gn:Code ;
+    skos:definition "lakes in a crater or caldera"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.LKSC" ;
+    skos:prefLabel "crater lakes"@en .
+
+gn:H.LKSI a gn:Code ;
+    skos:inScheme gn:H ;
+    skos:notation "H.LKSI" ;
+    skos:prefLabel "intermittent lakes"@en .
+
+gn:H.LKSN a gn:Code ;
+    skos:definition "inland bodies of salt water with no outlet"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.LKSN" ;
+    skos:prefLabel "salt lakes"@en .
+
+gn:H.LKSNI a gn:Code ;
+    skos:inScheme gn:H ;
+    skos:notation "H.LKSNI" ;
+    skos:prefLabel "intermittent salt lakes"@en .
+
+gn:H.LKX a gn:Code ;
+    skos:inScheme gn:H ;
+    skos:notation "H.LKX" ;
+    skos:prefLabel "section of lake"@en .
+
+gn:H.MFGN a gn:Code ;
+    skos:definition "diked salt ponds used in the production of solar evaporated salt"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.MFGN" ;
+    skos:prefLabel "salt evaporation ponds"@en .
+
+gn:H.MGV a gn:Code ;
+    skos:definition "a tropical tidal mud flat characterized by mangrove vegetation"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.MGV" ;
+    skos:prefLabel "mangrove swamp"@en .
+
+gn:H.MOOR a gn:Code ;
+    skos:definition "an area of open ground overlaid with wet peaty soils"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.MOOR" ;
+    skos:prefLabel "moor(s)"@en .
+
+gn:H.MRSH a gn:Code ;
+    skos:definition "a wetland dominated by grass-like vegetation"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.MRSH" ;
+    skos:prefLabel "marsh(es)"@en .
+
+gn:H.MRSHN a gn:Code ;
+    skos:definition "a flat area, subject to periodic salt water inundation, dominated by grassy salt-tolerant plants"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.MRSHN" ;
+    skos:prefLabel "salt marsh"@en .
+
+gn:H.NRWS a gn:Code ;
+    skos:definition "a navigable narrow part of a bay, strait, river, etc."@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.NRWS" ;
+    skos:prefLabel "narrows"@en .
+
+gn:H.OCN a gn:Code ;
+    skos:definition "one of the major divisions of the vast expanse of salt water covering part of the earth"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.OCN" ;
+    skos:prefLabel "ocean"@en .
+
+gn:H.OVF a gn:Code ;
+    skos:definition "an area of breaking waves caused by the meeting of currents or by waves moving against the current"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.OVF" ;
+    skos:prefLabel "overfalls"@en .
+
+gn:H.PND a gn:Code ;
+    skos:definition "a small standing waterbody"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.PND" ;
+    skos:prefLabel "pond"@en .
+
+gn:H.PNDI a gn:Code ;
+    skos:inScheme gn:H ;
+    skos:notation "H.PNDI" ;
+    skos:prefLabel "intermittent pond"@en .
+
+gn:H.PNDN a gn:Code ;
+    skos:definition "a small standing body of salt water often in a marsh or swamp, usually along a seacoast"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.PNDN" ;
+    skos:prefLabel "salt pond"@en .
+
+gn:H.PNDNI a gn:Code ;
+    skos:inScheme gn:H ;
+    skos:notation "H.PNDNI" ;
+    skos:prefLabel "intermittent salt pond(s)"@en .
+
+gn:H.PNDS a gn:Code ;
+    skos:definition "small standing waterbodies"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.PNDS" ;
+    skos:prefLabel "ponds"@en .
+
+gn:H.PNDSF a gn:Code ;
+    skos:definition "ponds or enclosures in which fish are kept or raised"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.PNDSF" ;
+    skos:prefLabel "fishponds"@en .
+
+gn:H.PNDSI a gn:Code ;
+    skos:inScheme gn:H ;
+    skos:notation "H.PNDSI" ;
+    skos:prefLabel "intermittent ponds"@en .
+
+gn:H.PNDSN a gn:Code ;
+    skos:definition "small standing bodies of salt water often in a marsh or swamp, usually along a seacoast"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.PNDSN" ;
+    skos:prefLabel "salt ponds"@en .
+
+gn:H.POOL a gn:Code ;
+    skos:definition "a small and comparatively still, deep part of a larger body of water such as a stream or harbor; or a small body of standing water"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.POOL" ;
+    skos:prefLabel "pool(s)"@en .
+
+gn:H.POOLI a gn:Code ;
+    skos:inScheme gn:H ;
+    skos:notation "H.POOLI" ;
+    skos:prefLabel "intermittent pool"@en .
+
+gn:H.RCH a gn:Code ;
+    skos:definition "a straight section of a navigable stream or channel between two bends"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.RCH" ;
+    skos:prefLabel "reach"@en .
+
+gn:H.RDGG a gn:Code ;
+    skos:definition "a linear elevation on an icecap"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.RDGG" ;
+    skos:prefLabel "icecap ridge"@en .
+
+gn:H.RDST a gn:Code ;
+    skos:definition "an open anchorage affording less protection than a harbor"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.RDST" ;
+    skos:prefLabel "roadstead"@en .
+
+gn:H.RF a gn:Code ;
+    skos:definition "a surface-navigation hazard composed of consolidated material"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.RF" ;
+    skos:prefLabel "reef(s)"@en .
+
+gn:H.RFC a gn:Code ;
+    skos:definition "a surface-navigation hazard composed of coral"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.RFC" ;
+    skos:prefLabel "coral reef(s)"@en .
+
+gn:H.RFX a gn:Code ;
+    skos:inScheme gn:H ;
+    skos:notation "H.RFX" ;
+    skos:prefLabel "section of reef"@en .
+
+gn:H.RPDS a gn:Code ;
+    skos:definition "a turbulent section of a stream associated with a steep, irregular stream bed"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.RPDS" ;
+    skos:prefLabel "rapids"@en .
+
+gn:H.RSV a gn:Code ;
+    skos:definition "an artificial pond or lake"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.RSV" ;
+    skos:prefLabel "reservoir(s)"@en .
+
+gn:H.RSVI a gn:Code ;
+    skos:inScheme gn:H ;
+    skos:notation "H.RSVI" ;
+    skos:prefLabel "intermittent reservoir"@en .
+
+gn:H.RSVT a gn:Code ;
+    skos:definition "a contained pool or tank of water at, below, or above ground level"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.RSVT" ;
+    skos:prefLabel "water tank"@en .
+
+gn:H.RVN a gn:Code ;
+    skos:definition "a small, narrow, deep, steep-sided stream channel, smaller than a gorge"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.RVN" ;
+    skos:prefLabel "ravine(s)"@en .
+
+gn:H.SBKH a gn:Code ;
+    skos:definition "a salt flat or salt encrusted plain subject to periodic inundation from flooding or high tides"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.SBKH" ;
+    skos:prefLabel "sabkha(s)"@en .
+
+gn:H.SD a gn:Code ;
+    skos:definition "a long arm of the sea forming a channel between the mainland and an island or islands; or connecting two larger bodies of water"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.SD" ;
+    skos:prefLabel "sound"@en .
+
+gn:H.SEA a gn:Code ;
+    skos:definition "a large body of salt water more or less confined by continuous land or chains of islands forming a subdivision of an ocean"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.SEA" ;
+    skos:prefLabel "sea"@en .
+
+gn:H.SHOL a gn:Code ;
+    skos:definition "a surface-navigation hazard composed of unconsolidated material"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.SHOL" ;
+    skos:prefLabel "shoal(s)"@en .
+
+gn:H.SILL a gn:Code ;
+    skos:definition "the low part of an underwater gap or saddle separating basins, including a similar feature at the mouth of a fjord"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.SILL" ;
+    skos:prefLabel "sill"@en .
+
+gn:H.SPNG a gn:Code ;
+    skos:definition "a place where ground water flows naturally out of the ground"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.SPNG" ;
+    skos:prefLabel "spring(s)"@en .
+
+gn:H.SPNS a gn:Code ;
+    skos:definition "a place where sulphur ground water flows naturally out of the ground"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.SPNS" ;
+    skos:prefLabel "sulphur spring(s)"@en .
+
+gn:H.SPNT a gn:Code ;
+    skos:definition "a place where hot ground water flows naturally out of the ground"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.SPNT" ;
+    skos:prefLabel "hot spring(s)"@en .
+
+gn:H.STM a gn:Code ;
+    skos:definition "a body of running water moving to a lower level in a channel on land"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.STM" ;
+    skos:prefLabel "stream"@en .
+
+gn:H.STMA a gn:Code ;
+    skos:definition "a diverging branch flowing out of a main stream and rejoining it downstream"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.STMA" ;
+    skos:prefLabel "anabranch"@en .
+
+gn:H.STMB a gn:Code ;
+    skos:definition "a conspicuously curved or bent segment of a stream"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.STMB" ;
+    skos:prefLabel "stream bend"@en .
+
+gn:H.STMC a gn:Code ;
+    skos:definition "a stream that has been substantially ditched, diked, or straightened"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.STMC" ;
+    skos:prefLabel "canalized stream"@en .
+
+gn:H.STMD a gn:Code ;
+    skos:definition "a branch which flows away from the main stream, as in a delta or irrigation canal"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.STMD" ;
+    skos:prefLabel "distributary(-ies)"@en .
+
+gn:H.STMH a gn:Code ;
+    skos:definition "the source and upper part of a stream, including the upper drainage basin"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.STMH" ;
+    skos:prefLabel "headwaters"@en .
+
+gn:H.STMI a gn:Code ;
+    skos:inScheme gn:H ;
+    skos:notation "H.STMI" ;
+    skos:prefLabel "intermittent stream"@en .
+
+gn:H.STMIX a gn:Code ;
+    skos:inScheme gn:H ;
+    skos:notation "H.STMIX" ;
+    skos:prefLabel "section of intermittent stream"@en .
+
+gn:H.STMM a gn:Code ;
+    skos:definition "a place where a stream discharges into a lagoon, lake, or the sea"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.STMM" ;
+    skos:prefLabel "stream mouth(s)"@en .
+
+gn:H.STMQ a gn:Code ;
+    skos:definition "a former stream or distributary no longer carrying flowing water, but still evident due to lakes, wetland, topographic or vegetation patterns"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.STMQ" ;
+    skos:prefLabel "abandoned watercourse"@en .
+
+gn:H.STMS a gn:Code ;
+    skos:definition "bodies of running water moving to a lower level in a channel on land"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.STMS" ;
+    skos:prefLabel "streams"@en .
+
+gn:H.STMSB a gn:Code ;
+    skos:definition "a surface stream that disappears into an underground channel, or dries up in an arid area"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.STMSB" ;
+    skos:prefLabel "lost river"@en .
+
+gn:H.STMX a gn:Code ;
+    skos:inScheme gn:H ;
+    skos:notation "H.STMX" ;
+    skos:prefLabel "section of stream"@en .
+
+gn:H.STRT a gn:Code ;
+    skos:definition "a relatively narrow waterway, usually narrower and less extensive than a sound, connecting two larger bodies of water"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.STRT" ;
+    skos:prefLabel "strait"@en .
+
+gn:H.SWMP a gn:Code ;
+    skos:definition "a wetland dominated by tree vegetation"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.SWMP" ;
+    skos:prefLabel "swamp"@en .
+
+gn:H.SYSI a gn:Code ;
+    skos:definition "a network of ditches and one or more of the following elements: water supply, reservoir, canal, pump, well, drain, etc."@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.SYSI" ;
+    skos:prefLabel "irrigation system"@en .
+
+gn:H.TNLC a gn:Code ;
+    skos:definition "a tunnel through which a canal passes"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.TNLC" ;
+    skos:prefLabel "canal tunnel"@en .
+
+gn:H.WAD a gn:Code ;
+    skos:definition "a valley or ravine, bounded by relatively steep banks, which in the rainy season becomes a watercourse; found primarily in North Africa and the Middle East"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.WAD" ;
+    skos:prefLabel "wadi"@en .
+
+gn:H.WADB a gn:Code ;
+    skos:definition "a conspicuously curved or bent segment of a wadi"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.WADB" ;
+    skos:prefLabel "wadi bend"@en .
+
+gn:H.WADJ a gn:Code ;
+    skos:definition "a place where two or more wadies join"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.WADJ" ;
+    skos:prefLabel "wadi junction"@en .
+
+gn:H.WADM a gn:Code ;
+    skos:definition "the lower terminus of a wadi where it widens into an adjoining floodplain, depression, or waterbody"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.WADM" ;
+    skos:prefLabel "wadi mouth"@en .
+
+gn:H.WADS a gn:Code ;
+    skos:definition "valleys or ravines, bounded by relatively steep banks, which in the rainy season become watercourses; found primarily in North Africa and the Middle East"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.WADS" ;
+    skos:prefLabel "wadies"@en .
+
+gn:H.WADX a gn:Code ;
+    skos:inScheme gn:H ;
+    skos:notation "H.WADX" ;
+    skos:prefLabel "section of wadi"@en .
+
+gn:H.WHRL a gn:Code ;
+    skos:definition "a turbulent, rotating movement of water in a stream"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.WHRL" ;
+    skos:prefLabel "whirlpool"@en .
+
+gn:H.WLL a gn:Code ;
+    skos:definition "a cylindrical hole, pit, or tunnel drilled or dug down to a depth from which water, oil, or gas can be pumped or brought to the surface"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.WLL" ;
+    skos:prefLabel "well"@en .
+
+gn:H.WLLQ a gn:Code ;
+    skos:inScheme gn:H ;
+    skos:notation "H.WLLQ" ;
+    skos:prefLabel "abandoned well"@en .
+
+gn:H.WLLS a gn:Code ;
+    skos:definition "cylindrical holes, pits, or tunnels drilled or dug down to a depth from which water, oil, or gas can be pumped or brought to the surface"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.WLLS" ;
+    skos:prefLabel "wells"@en .
+
+gn:H.WTLD a gn:Code ;
+    skos:definition "an area subject to inundation, usually characterized by bog, marsh, or swamp vegetation"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.WTLD" ;
+    skos:prefLabel "wetland"@en .
+
+gn:H.WTLDI a gn:Code ;
+    skos:inScheme gn:H ;
+    skos:notation "H.WTLDI" ;
+    skos:prefLabel "intermittent wetland"@en .
+
+gn:H.WTRC a gn:Code ;
+    skos:definition "a natural, well-defined channel produced by flowing water, or an artificial channel designed to carry flowing water"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.WTRC" ;
+    skos:prefLabel "watercourse"@en .
+
+gn:H.WTRH a gn:Code ;
+    skos:definition "a natural hole, hollow, or small depression that contains water, used by man and animals, especially in arid areas"@en ;
+    skos:inScheme gn:H ;
+    skos:notation "H.WTRH" ;
+    skos:prefLabel "waterhole(s)"@en .
+
+gn:L.AGRC a gn:Code ;
+    skos:definition "a tract of land set aside for agricultural settlement"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.AGRC" ;
+    skos:prefLabel "agricultural colony"@en .
+
+gn:L.AMUS a gn:Code ;
+    skos:definition "Amusement Park are theme parks, adventure parks offering entertainment, similar to funfairs but with a fix location"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.AMUS" ;
+    skos:prefLabel "amusement park"@en .
+
+gn:L.AREA a gn:Code ;
+    skos:definition "a tract of land without homogeneous character or boundaries"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.AREA" ;
+    skos:prefLabel "area"@en .
+
+gn:L.BSND a gn:Code ;
+    skos:definition "an area drained by a stream"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.BSND" ;
+    skos:prefLabel "drainage basin"@en .
+
+gn:L.BSNP a gn:Code ;
+    skos:definition "an area underlain by an oil-rich structural basin"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.BSNP" ;
+    skos:prefLabel "petroleum basin"@en .
+
+gn:L.BTL a gn:Code ;
+    skos:definition "a site of a land battle of historical importance"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.BTL" ;
+    skos:prefLabel "battlefield"@en .
+
+gn:L.CLG a gn:Code ;
+    skos:definition "an area in a forest with trees removed"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.CLG" ;
+    skos:prefLabel "clearing"@en .
+
+gn:L.CMN a gn:Code ;
+    skos:definition "a park or pasture for community use"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.CMN" ;
+    skos:prefLabel "common"@en .
+
+gn:L.CNS a gn:Code ;
+    skos:definition "a lease of land by a government for economic development, e.g., mining, forestry"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.CNS" ;
+    skos:prefLabel "concession area"@en .
+
+gn:L.COLF a gn:Code ;
+    skos:definition "a region in which coal deposits of possible economic value occur"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.COLF" ;
+    skos:prefLabel "coalfield"@en .
+
+gn:L.CONT a gn:Code ;
+    skos:definition "continent : Europe, Africa, Asia, North America, South America, Oceania,Antarctica"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.CONT" ;
+    skos:prefLabel "continent"@en .
+
+gn:L.CST a gn:Code ;
+    skos:definition "a zone of variable width straddling the shoreline"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.CST" ;
+    skos:prefLabel "coast"@en .
+
+gn:L.CTRB a gn:Code ;
+    skos:definition "a place where a number of businesses are located"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.CTRB" ;
+    skos:prefLabel "business center"@en .
+
+gn:L.DEVH a gn:Code ;
+    skos:definition "a tract of land on which many houses of similar design are built according to a development plan"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.DEVH" ;
+    skos:prefLabel "housing development"@en .
+
+gn:L.FLD a gn:Code ;
+    skos:definition "an open as opposed to wooded area"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.FLD" ;
+    skos:prefLabel "field(s)"@en .
+
+gn:L.FLDI a gn:Code ;
+    skos:definition "a tract of level or terraced land which is irrigated"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.FLDI" ;
+    skos:prefLabel "irrigated field(s)"@en .
+
+gn:L.GASF a gn:Code ;
+    skos:definition "an area containing a subterranean store of natural gas of economic value"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.GASF" ;
+    skos:prefLabel "gasfield"@en .
+
+gn:L.GRAZ a gn:Code ;
+    skos:definition "an area of grasses and shrubs used for grazing"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.GRAZ" ;
+    skos:prefLabel "grazing area"@en .
+
+gn:L.GVL a gn:Code ;
+    skos:definition "an area covered with gravel"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.GVL" ;
+    skos:prefLabel "gravel area"@en .
+
+gn:L.INDS a gn:Code ;
+    skos:definition "an area characterized by industrial activity"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.INDS" ;
+    skos:prefLabel "industrial area"@en .
+
+gn:L.LAND a gn:Code ;
+    skos:definition "a tract of land in the Arctic"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.LAND" ;
+    skos:prefLabel "arctic land"@en .
+
+gn:L.LCTY a gn:Code ;
+    skos:definition "a minor area or place of unspecified or mixed character and indefinite boundaries"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.LCTY" ;
+    skos:prefLabel "locality"@en .
+
+gn:L.MILB a gn:Code ;
+    skos:definition "a place used by an army or other armed service for storing arms and supplies, and for accommodating and training troops, a base from which operations can be initiated"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.MILB" ;
+    skos:prefLabel "military base"@en .
+
+gn:L.MNA a gn:Code ;
+    skos:definition "an area of mine sites where minerals and ores are extracted"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.MNA" ;
+    skos:prefLabel "mining area"@en .
+
+gn:L.MVA a gn:Code ;
+    skos:definition "a tract of land where military field exercises are carried out"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.MVA" ;
+    skos:prefLabel "maneuver area"@en .
+
+gn:L.NVB a gn:Code ;
+    skos:definition "an area used to store supplies, provide barracks for troops and naval personnel, a port for naval vessels, and from which operations are initiated"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.NVB" ;
+    skos:prefLabel "naval base"@en .
+
+gn:L.OAS a gn:Code ;
+    skos:definition "an area in a desert made productive by the availability of water"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.OAS" ;
+    skos:prefLabel "oasis(-es)"@en .
+
+gn:L.OILF a gn:Code ;
+    skos:definition "an area containing a subterranean store of petroleum of economic value"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.OILF" ;
+    skos:prefLabel "oilfield"@en .
+
+gn:L.PEAT a gn:Code ;
+    skos:definition "an area where peat is harvested"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.PEAT" ;
+    skos:prefLabel "peat cutting area"@en .
+
+gn:L.PRK a gn:Code ;
+    skos:definition "an area, often of forested land, maintained as a place of beauty, or for recreation"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.PRK" ;
+    skos:prefLabel "park"@en .
+
+gn:L.PRT a gn:Code ;
+    skos:definition "a place provided with terminal and transfer facilities for loading and discharging waterborne cargo or passengers, usually located in a harbor"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.PRT" ;
+    skos:prefLabel "port"@en .
+
+gn:L.QCKS a gn:Code ;
+    skos:definition "an area where loose sand with water moving through it may become unstable when heavy objects are placed at the surface, causing them to sink"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.QCKS" ;
+    skos:prefLabel "quicksand"@en .
+
+gn:L.REP a gn:Code ;
+    owl:deprecated true ;
+    skos:inScheme gn:L ;
+    skos:notation "L.REP" ;
+    skos:prefLabel "republic"@en .
+
+gn:L.RES a gn:Code ;
+    skos:definition "a tract of public land reserved for future use or restricted as to use"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.RES" ;
+    skos:prefLabel "reserve"@en .
+
+gn:L.RESA a gn:Code ;
+    skos:definition "a tract of land reserved for agricultural reclamation and/or development"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.RESA" ;
+    skos:prefLabel "agricultural reserve"@en .
+
+gn:L.RESF a gn:Code ;
+    skos:definition "a forested area set aside for preservation or controlled use"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.RESF" ;
+    skos:prefLabel "forest reserve"@en .
+
+gn:L.RESH a gn:Code ;
+    skos:definition "a tract of land used primarily for hunting"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.RESH" ;
+    skos:prefLabel "hunting reserve"@en .
+
+gn:L.RESN a gn:Code ;
+    skos:definition "an area reserved for the maintenance of a natural habitat"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.RESN" ;
+    skos:prefLabel "nature reserve"@en .
+
+gn:L.RESP a gn:Code ;
+    skos:definition "an area of palm trees where use is controlled"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.RESP" ;
+    skos:prefLabel "palm tree reserve"@en .
+
+gn:L.RESV a gn:Code ;
+    skos:definition "a tract of land set aside for aboriginal, tribal, or native populations"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.RESV" ;
+    skos:prefLabel "reservation"@en .
+
+gn:L.RESW a gn:Code ;
+    skos:definition "a tract of public land reserved for the preservation of wildlife"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.RESW" ;
+    skos:prefLabel "wildlife reserve"@en .
+
+gn:L.RGN a gn:Code ;
+    skos:definition "an area distinguished by one or more observable physical or cultural characteristics"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.RGN" ;
+    skos:prefLabel "region"@en .
+
+gn:L.RGNE a gn:Code ;
+    skos:definition "a region of a country established for economic development or for statistical purposes"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.RGNE" ;
+    skos:prefLabel "economic region"@en .
+
+gn:L.RGNH a gn:Code ;
+    skos:historyNote "Added in v3.1"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.RGNH" ;
+    skos:prefLabel "historical region"@en .
+
+gn:L.RGNL a gn:Code ;
+    skos:definition "a tract of land distinguished by numerous lakes"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.RGNL" ;
+    skos:prefLabel "lake region"@en .
+
+gn:L.RNGA a gn:Code ;
+    skos:definition "a tract of land used for artillery firing practice"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.RNGA" ;
+    skos:prefLabel "artillery range"@en .
+
+gn:L.SALT a gn:Code ;
+    skos:definition "a shallow basin or flat where salt accumulates after periodic inundation"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.SALT" ;
+    skos:prefLabel "salt area"@en .
+
+gn:L.SNOW a gn:Code ;
+    skos:definition "an area of permanent snow and ice forming the accumulation area of a glacier"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.SNOW" ;
+    skos:prefLabel "snowfield"@en .
+
+gn:L.TRB a gn:Code ;
+    skos:definition "a tract of land used by nomadic or other tribes"@en ;
+    skos:inScheme gn:L ;
+    skos:notation "L.TRB" ;
+    skos:prefLabel "tribal area"@en .
+
+gn:L.ZZZZZ a gn:Code ;
+    owl:deprecated true ;
+    skos:inScheme gn:L ;
+    skos:notation "L.ZZZZZ" ;
+    skos:prefLabel "master source holdings list"@en .
+
+gn:P.PPL a gn:Code ;
+    skos:definition "a city, town, village, or other agglomeration of buildings where people live and work"@en ;
+    skos:inScheme gn:P ;
+    skos:notation "P.PPL" ;
+    skos:prefLabel "populated place"@en .
+
+gn:P.PPLA a gn:Code ;
+    skos:definition "seat of a first-order administrative division (PPLC takes precedence over PPLA)"@en ;
+    skos:inScheme gn:P ;
+    skos:notation "P.PPLA" ;
+    skos:prefLabel """seat of a first-order administrative
+            division"""@en .
+
+gn:P.PPLA2 a gn:Code ;
+    skos:inScheme gn:P ;
+    skos:notation "P.PPLA2" ;
+    skos:prefLabel "seat of a second-order administrative division"@en .
+
+gn:P.PPLA3 a gn:Code ;
+    skos:inScheme gn:P ;
+    skos:notation "P.PPLA3" ;
+    skos:prefLabel "seat of a third-order administrative division"@en .
+
+gn:P.PPLA4 a gn:Code ;
+    skos:inScheme gn:P ;
+    skos:notation "P.PPLA4" ;
+    skos:prefLabel "seat of a fourth-order administrative division"@en .
+
+gn:P.PPLF a gn:Code ;
+    skos:definition "a populated place where the population is largely engaged in agricultural activities"@en ;
+    skos:inScheme gn:P ;
+    skos:notation "P.PPLF" ;
+    skos:prefLabel "farm village"@en .
+
+gn:P.PPLG a gn:Code ;
+    skos:inScheme gn:P ;
+    skos:notation "P.PPLG" ;
+    skos:prefLabel "seat of government of a political entity"@en .
+
+gn:P.PPLL a gn:Code ;
+    skos:definition "an area similar to a locality but with a small group of dwellings or other buildings"@en ;
+    skos:inScheme gn:P ;
+    skos:notation "P.PPLL" ;
+    skos:prefLabel "populated locality"@en .
+
+gn:P.PPLQ a gn:Code ;
+    skos:inScheme gn:P ;
+    skos:notation "P.PPLQ" ;
+    skos:prefLabel "abandoned populated place"@en .
+
+gn:P.PPLR a gn:Code ;
+    skos:definition "a populated place whose population is largely engaged in religious occupations"@en ;
+    skos:inScheme gn:P ;
+    skos:notation "P.PPLR" ;
+    skos:prefLabel "religious populated place"@en .
+
+gn:P.PPLS a gn:Code ;
+    skos:definition "cities, towns, villages, or other agglomerations of buildings where people live and work"@en ;
+    skos:inScheme gn:P ;
+    skos:notation "P.PPLS" ;
+    skos:prefLabel "populated places"@en .
+
+gn:P.PPLW a gn:Code ;
+    skos:definition "a village, town or city destroyed by a natural disaster, or by war"@en ;
+    skos:inScheme gn:P ;
+    skos:notation "P.PPLW" ;
+    skos:prefLabel "destroyed populated place"@en .
+
+gn:P.PPLX a gn:Code ;
+    skos:inScheme gn:P ;
+    skos:notation "P.PPLX" ;
+    skos:prefLabel "section of populated place"@en .
+
+gn:P.STLMT a gn:Code ;
+    skos:inScheme gn:P ;
+    skos:notation "P.STLMT" ;
+    skos:prefLabel "israeli settlement"@en .
+
+gn:R.CSWY a gn:Code ;
+    skos:definition "a raised roadway across wet ground or shallow water"@en ;
+    skos:inScheme gn:R ;
+    skos:notation "R.CSWY" ;
+    skos:prefLabel "causeway"@en .
+
+gn:R.CSWYQ a gn:Code ;
+    owl:deprecated true ;
+    skos:definition "a causeway no longer used for transportation"@en ;
+    skos:inScheme gn:R ;
+    skos:notation "R.CSWYQ" ;
+    skos:prefLabel "former causeway"@en .
+
+gn:R.OILP a gn:Code ;
+    skos:definition "a pipeline used for transporting oil"@en ;
+    skos:inScheme gn:R ;
+    skos:notation "R.OILP" ;
+    skos:prefLabel "oil pipeline"@en .
+
+gn:R.PRMN a gn:Code ;
+    skos:definition "a place for public walking, usually along a beach front"@en ;
+    skos:inScheme gn:R ;
+    skos:notation "R.PRMN" ;
+    skos:prefLabel "promenade"@en .
+
+gn:R.PTGE a gn:Code ;
+    skos:definition "a place where boats, goods, etc., are carried overland between navigable waters"@en ;
+    skos:inScheme gn:R ;
+    skos:notation "R.PTGE" ;
+    skos:prefLabel "portage"@en .
+
+gn:R.RD a gn:Code ;
+    skos:definition "an open way with improved surface for transportation of animals, people and vehicles"@en ;
+    skos:inScheme gn:R ;
+    skos:notation "R.RD" ;
+    skos:prefLabel "road"@en .
+
+gn:R.RDA a gn:Code ;
+    skos:definition "the remains of a road used by ancient cultures"@en ;
+    skos:inScheme gn:R ;
+    skos:notation "R.RDA" ;
+    skos:prefLabel "ancient road"@en .
+
+gn:R.RDB a gn:Code ;
+    skos:definition "a conspicuously curved or bent section of a road"@en ;
+    skos:inScheme gn:R ;
+    skos:notation "R.RDB" ;
+    skos:prefLabel "road bend"@en .
+
+gn:R.RDCUT a gn:Code ;
+    skos:definition "an excavation cut through a hill or ridge for a road"@en ;
+    skos:inScheme gn:R ;
+    skos:notation "R.RDCUT" ;
+    skos:prefLabel "road cut"@en .
+
+gn:R.RDJCT a gn:Code ;
+    skos:definition "a place where two or more roads join"@en ;
+    skos:inScheme gn:R ;
+    skos:notation "R.RDJCT" ;
+    skos:prefLabel "road junction"@en .
+
+gn:R.RJCT a gn:Code ;
+    skos:definition "a place where two or more railroad tracks join"@en ;
+    skos:inScheme gn:R ;
+    skos:notation "R.RJCT" ;
+    skos:prefLabel "railroad junction"@en .
+
+gn:R.RR a gn:Code ;
+    skos:definition "a permanent twin steel-rail track on which freight and passenger cars move long distances"@en ;
+    skos:inScheme gn:R ;
+    skos:notation "R.RR" ;
+    skos:prefLabel "railroad"@en .
+
+gn:R.RRQ a gn:Code ;
+    skos:inScheme gn:R ;
+    skos:notation "R.RRQ" ;
+    skos:prefLabel "abandoned railroad"@en .
+
+gn:R.RTE a gn:Code ;
+    skos:definition "the route taken by caravans"@en ;
+    skos:inScheme gn:R ;
+    skos:notation "R.RTE" ;
+    skos:prefLabel "caravan route"@en .
+
+gn:R.RYD a gn:Code ;
+    skos:definition "a system of tracks used for the making up of trains, and switching and storing freight cars"@en ;
+    skos:inScheme gn:R ;
+    skos:notation "R.RYD" ;
+    skos:prefLabel "railroad yard"@en .
+
+gn:R.ST a gn:Code ;
+    skos:definition "a paved urban thoroughfare"@en ;
+    skos:inScheme gn:R ;
+    skos:notation "R.ST" ;
+    skos:prefLabel "street"@en .
+
+gn:R.STKR a gn:Code ;
+    skos:definition "a route taken by livestock herds"@en ;
+    skos:inScheme gn:R ;
+    skos:notation "R.STKR" ;
+    skos:prefLabel "stock route"@en .
+
+gn:R.TNL a gn:Code ;
+    skos:definition "a subterranean passageway for transportation"@en ;
+    skos:inScheme gn:R ;
+    skos:notation "R.TNL" ;
+    skos:prefLabel "tunnel"@en .
+
+gn:R.TNLN a gn:Code ;
+    skos:definition "a cave that is open at both ends"@en ;
+    skos:inScheme gn:R ;
+    skos:notation "R.TNLN" ;
+    skos:prefLabel "natural tunnel"@en .
+
+gn:R.TNLRD a gn:Code ;
+    skos:definition "a tunnel through which a road passes"@en ;
+    skos:inScheme gn:R ;
+    skos:notation "R.TNLRD" ;
+    skos:prefLabel "road tunnel"@en .
+
+gn:R.TNLRR a gn:Code ;
+    skos:definition "a tunnel through which a railroad passes"@en ;
+    skos:inScheme gn:R ;
+    skos:notation "R.TNLRR" ;
+    skos:prefLabel "railroad tunnel"@en .
+
+gn:R.TNLS a gn:Code ;
+    skos:definition "subterranean passageways for transportation"@en ;
+    skos:inScheme gn:R ;
+    skos:notation "R.TNLS" ;
+    skos:prefLabel "tunnels"@en .
+
+gn:R.TRL a gn:Code ;
+    skos:definition "a path, track, or route used by pedestrians, animals, or off-road vehicles"@en ;
+    skos:inScheme gn:R ;
+    skos:notation "R.TRL" ;
+    skos:prefLabel "trail"@en .
+
+gn:S.ADMF a gn:Code ;
+    skos:definition "a government building"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.ADMF" ;
+    skos:prefLabel "administrative facility"@en .
+
+gn:S.AGRF a gn:Code ;
+    skos:definition "a building and/or tract of land used for improving agriculture"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.AGRF" ;
+    skos:prefLabel "agricultural facility"@en .
+
+gn:S.AIRB a gn:Code ;
+    skos:definition "an area used to store supplies, provide barracks for air force personnel, hangars and runways for aircraft, and from which operations are initiated"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.AIRB" ;
+    skos:prefLabel "airbase"@en .
+
+gn:S.AIRF a gn:Code ;
+    skos:definition "a place on land where aircraft land and take off; no facilities provided for the commercial handling of passengers and cargo"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.AIRF" ;
+    skos:prefLabel "airfield"@en .
+
+gn:S.AIRH a gn:Code ;
+    skos:definition "a place where helicopters land and take off"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.AIRH" ;
+    skos:prefLabel "heliport"@en .
+
+gn:S.AIRP a gn:Code ;
+    skos:definition "a place where aircraft regularly land and take off, with runways, navigational aids, and major facilities for the commercial handling of passengers and cargo"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.AIRP" ;
+    skos:prefLabel "airport"@en .
+
+gn:S.AIRQ a gn:Code ;
+    skos:inScheme gn:S ;
+    skos:notation "S.AIRQ" ;
+    skos:prefLabel "abandoned airfield"@en .
+
+gn:S.AMTH a gn:Code ;
+    skos:definition "an oval or circular structure with rising tiers of seats about a stage or open space"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.AMTH" ;
+    skos:prefLabel "amphitheater"@en .
+
+gn:S.ANS a gn:Code ;
+    skos:definition "a place where archeological remains, old structures, or cultural artifacts are located"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.ANS" ;
+    skos:prefLabel "ancient site"@en .
+
+gn:S.AQC a gn:Code ;
+    skos:definition "facility or area for the cultivation of aquatic animals and plants, especially fish, shellfish, and seaweed, in natural or controlled marine or freshwater environments; underwater agriculture"@en ;
+    skos:historyNote "Added in v3.0"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.AQC" ;
+    skos:prefLabel "aquaculture facility"@en .
+
+gn:S.ARCH a gn:Code ;
+    skos:definition "a natural or man-made structure in the form of an arch"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.ARCH" ;
+    skos:prefLabel "arch"@en .
+
+gn:S.ASTR a gn:Code ;
+    skos:definition "a point on the earth whose position has been determined by observations of celestial bodies"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.ASTR" ;
+    skos:prefLabel "astronomical station"@en .
+
+gn:S.ASYL a gn:Code ;
+    skos:definition "a facility where the insane are cared for and protected"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.ASYL" ;
+    skos:prefLabel "asylum"@en .
+
+gn:S.ATHF a gn:Code ;
+    skos:definition "a tract of land used for playing team sports, and athletic track and field events"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.ATHF" ;
+    skos:prefLabel "athletic field"@en .
+
+gn:S.ATM a gn:Code ;
+    skos:definition "An unattended electronic machine in a public place, connected to a data system and related equipment and activated by a bank customer to obtain cash withdrawals and other banking services."@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.ATM" ;
+    skos:prefLabel "automatic teller machine"@en .
+
+gn:S.BANK a gn:Code ;
+    skos:definition "A business establishment in which money is kept for saving or commercial purposes or is invested, supplied for loans, or exchanged."@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.BANK" ;
+    skos:prefLabel "bank"@en .
+
+gn:S.BCN a gn:Code ;
+    skos:definition "a fixed artificial navigation mark"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.BCN" ;
+    skos:prefLabel "beacon"@en .
+
+gn:S.BDG a gn:Code ;
+    skos:definition "a structure erected across an obstacle such as a stream, road, etc., in order to carry roads, railroads, and pedestrians across"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.BDG" ;
+    skos:prefLabel "bridge"@en .
+
+gn:S.BDGQ a gn:Code ;
+    skos:definition "a destroyed or decayed bridge which is no longer functional"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.BDGQ" ;
+    skos:prefLabel "ruined bridge"@en .
+
+gn:S.BLDG a gn:Code ;
+    skos:definition "a structure built for permanent use, as a house, factory, etc."@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.BLDG" ;
+    skos:prefLabel "building(s)"@en .
+
+gn:S.BLDO a gn:Code ;
+    skos:definition "commercial building where business and/or services are conducted"@en ;
+    skos:historyNote "Added in v3.0"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.BLDO" ;
+    skos:prefLabel "office building"@en .
+
+gn:S.BP a gn:Code ;
+    skos:definition "a fixture marking a point along a boundary"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.BP" ;
+    skos:prefLabel "boundary marker"@en .
+
+gn:S.BRKS a gn:Code ;
+    skos:definition "a building for lodging military personnel"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.BRKS" ;
+    skos:prefLabel "barracks"@en .
+
+gn:S.BRKW a gn:Code ;
+    skos:definition "a structure erected to break the force of waves at the entrance to a harbor or port"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.BRKW" ;
+    skos:prefLabel "breakwater"@en .
+
+gn:S.BSTN a gn:Code ;
+    skos:definition "a facility for baling agricultural products"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.BSTN" ;
+    skos:prefLabel "baling station"@en .
+
+gn:S.BTYD a gn:Code ;
+    skos:definition "a waterside facility for servicing, repairing, and building small vessels"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.BTYD" ;
+    skos:prefLabel "boatyard"@en .
+
+gn:S.BUR a gn:Code ;
+    skos:definition "a cave used for human burials"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.BUR" ;
+    skos:prefLabel "burial cave(s)"@en .
+
+gn:S.BUSTN a gn:Code ;
+    skos:definition "a facility comprising ticket office, platforms, etc. for loading and unloading passengers"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.BUSTN" ;
+    skos:prefLabel "bus station"@en .
+
+gn:S.BUSTP a gn:Code ;
+    skos:definition "a place lacking station facilities"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.BUSTP" ;
+    skos:prefLabel "bus stop"@en .
+
+gn:S.CARN a gn:Code ;
+    skos:definition "a heap of stones erected as a landmark or for other purposes"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.CARN" ;
+    skos:prefLabel "cairn"@en .
+
+gn:S.CAVE a gn:Code ;
+    skos:definition "an underground passageway or chamber, or cavity on the side of a cliff"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.CAVE" ;
+    skos:prefLabel "cave(s)"@en .
+
+gn:S.CCL a gn:Code ;
+    owl:deprecated true ;
+    skos:definition "Centres for Continuous Learning"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.CCL" ;
+    skos:prefLabel "Centre Continuous Learning"@en .
+
+gn:S.CH a gn:Code ;
+    skos:definition "a building for public Christian worship"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.CH" ;
+    skos:prefLabel "church"@en .
+
+gn:S.CMP a gn:Code ;
+    skos:definition "a site occupied by tents, huts, or other shelters for temporary use"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.CMP" ;
+    skos:prefLabel "camp(s)"@en .
+
+gn:S.CMPL a gn:Code ;
+    skos:definition "a camp used by loggers"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.CMPL" ;
+    skos:prefLabel "logging camp"@en .
+
+gn:S.CMPLA a gn:Code ;
+    skos:definition "a camp used by migrant or temporary laborers"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.CMPLA" ;
+    skos:prefLabel "labor camp"@en .
+
+gn:S.CMPMN a gn:Code ;
+    skos:definition "a camp used by miners"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.CMPMN" ;
+    skos:prefLabel "mining camp"@en .
+
+gn:S.CMPO a gn:Code ;
+    skos:definition "a camp used by oilfield workers"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.CMPO" ;
+    skos:prefLabel "oil camp"@en .
+
+gn:S.CMPQ a gn:Code ;
+    skos:inScheme gn:S ;
+    skos:notation "S.CMPQ" ;
+    skos:prefLabel "abandoned camp"@en .
+
+gn:S.CMPRF a gn:Code ;
+    skos:definition "a camp used by refugees"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.CMPRF" ;
+    skos:prefLabel "refugee camp"@en .
+
+gn:S.CMTY a gn:Code ;
+    skos:definition "a burial place or ground"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.CMTY" ;
+    skos:prefLabel "cemetery"@en .
+
+gn:S.COMC a gn:Code ;
+    skos:definition "a facility, including buildings, antennae, towers and electronic equipment for receiving and transmitting information"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.COMC" ;
+    skos:prefLabel "communication center"@en .
+
+gn:S.CRRL a gn:Code ;
+    skos:definition "a pen or enclosure for confining or capturing animals"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.CRRL" ;
+    skos:prefLabel "corral(s)"@en .
+
+gn:S.CSNO a gn:Code ;
+    skos:definition "a building used for entertainment, especially gambling"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.CSNO" ;
+    skos:prefLabel "casino"@en .
+
+gn:S.CSTL a gn:Code ;
+    skos:definition "a large fortified building or set of buildings"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.CSTL" ;
+    skos:prefLabel "castle"@en .
+
+gn:S.CSTM a gn:Code ;
+    skos:definition "a building in a port where customs and duties are paid, and where vessels are entered and cleared"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.CSTM" ;
+    skos:prefLabel "customs house"@en .
+
+gn:S.CTHSE a gn:Code ;
+    skos:definition "a building in which courts of law are held"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.CTHSE" ;
+    skos:prefLabel "courthouse"@en .
+
+gn:S.CTRA a gn:Code ;
+    skos:definition "a facility where atomic research is carried out"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.CTRA" ;
+    skos:prefLabel "atomic center"@en .
+
+gn:S.CTRCM a gn:Code ;
+    skos:definition "a facility for community recreation and other activities"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.CTRCM" ;
+    skos:prefLabel "community center"@en .
+
+gn:S.CTRF a gn:Code ;
+    skos:definition "a place where more than one facility is situated"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.CTRF" ;
+    skos:prefLabel "facility center"@en .
+
+gn:S.CTRM a gn:Code ;
+    skos:definition "a complex of health care buildings including two or more of the following: hospital, medical school, clinic, pharmacy, doctor's offices, etc."@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.CTRM" ;
+    skos:prefLabel "medical center"@en .
+
+gn:S.CTRR a gn:Code ;
+    skos:definition "a facility where more than one religious activity is carried out, e.g., retreat, school, monastery, worship"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.CTRR" ;
+    skos:prefLabel "religious center"@en .
+
+gn:S.CTRS a gn:Code ;
+    skos:definition "a facility for launching, tracking, or controlling satellites and space vehicles"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.CTRS" ;
+    skos:prefLabel "space center"@en .
+
+gn:S.CVNT a gn:Code ;
+    skos:definition "a building where a community of nuns lives in seclusion"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.CVNT" ;
+    skos:prefLabel "convent"@en .
+
+gn:S.DAM a gn:Code ;
+    skos:definition "a barrier constructed across a stream to impound water"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.DAM" ;
+    skos:prefLabel "dam"@en .
+
+gn:S.DAMQ a gn:Code ;
+    skos:definition "a destroyed or decayed dam which is no longer functional"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.DAMQ" ;
+    skos:prefLabel "ruined dam"@en .
+
+gn:S.DAMSB a gn:Code ;
+    skos:definition "a dam put down to bedrock in a sand river"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.DAMSB" ;
+    skos:prefLabel "sub-surface dam"@en .
+
+gn:S.DARY a gn:Code ;
+    skos:definition "a facility for the processing, sale and distribution of milk or milk products"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.DARY" ;
+    skos:prefLabel "dairy"@en .
+
+gn:S.DCKD a gn:Code ;
+    skos:definition "a dock providing support for a vessel, and means for removing the water so that the bottom of the vessel can be exposed"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.DCKD" ;
+    skos:prefLabel "dry dock"@en .
+
+gn:S.DCKY a gn:Code ;
+    skos:definition "a facility for servicing, building, or repairing ships"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.DCKY" ;
+    skos:prefLabel "dockyard"@en .
+
+gn:S.DIKE a gn:Code ;
+    skos:definition "an earth or stone embankment usually constructed for flood or stream control"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.DIKE" ;
+    skos:prefLabel "dike"@en .
+
+gn:S.DIP a gn:Code ;
+    skos:definition "office, residence, or facility of a foreign government, which may include an embassy, consulate, chancery, office of charge d?affaires, or other diplomatic, economic, military, or cultural mission"@en ;
+    skos:historyNote "Added in v3.0"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.DIP" ;
+    skos:prefLabel "diplomatic facility"@en .
+
+gn:S.DPOF a gn:Code ;
+    skos:definition "an area where fuel is stored"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.DPOF" ;
+    skos:prefLabel "fuel depot"@en .
+
+gn:S.EST a gn:Code ;
+    skos:definition "a large commercialized agricultural landholding with associated buildings and other facilities"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.EST" ;
+    skos:prefLabel "estate(s)"@en .
+
+gn:S.ESTB a gn:Code ;
+    owl:deprecated true ;
+    skos:definition "an estate that specializes in the growing of bananas"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.ESTB" ;
+    skos:prefLabel "banana plantation"@en .
+
+gn:S.ESTC a gn:Code ;
+    owl:deprecated true ;
+    skos:definition "an estate specializing in the cultivation of cotton"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.ESTC" ;
+    skos:prefLabel "cotton plantation"@en .
+
+gn:S.ESTO a gn:Code ;
+    skos:definition "an estate specializing in the cultivation of oil palm trees"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.ESTO" ;
+    skos:prefLabel "oil palm plantation"@en .
+
+gn:S.ESTR a gn:Code ;
+    skos:definition "an estate which specializes in growing and tapping rubber trees"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.ESTR" ;
+    skos:prefLabel "rubber plantation"@en .
+
+gn:S.ESTSG a gn:Code ;
+    skos:definition "an estate that specializes in growing sugar cane"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.ESTSG" ;
+    skos:prefLabel "sugar plantation"@en .
+
+gn:S.ESTSL a gn:Code ;
+    owl:deprecated true ;
+    skos:definition "an estate that specializes in growing sisal"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.ESTSL" ;
+    skos:prefLabel "sisal plantation"@en .
+
+gn:S.ESTT a gn:Code ;
+    skos:definition "an estate which specializes in growing tea bushes"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.ESTT" ;
+    skos:prefLabel "tea plantation"@en .
+
+gn:S.ESTX a gn:Code ;
+    skos:inScheme gn:S ;
+    skos:notation "S.ESTX" ;
+    skos:prefLabel "section of estate"@en .
+
+gn:S.FCL a gn:Code ;
+    skos:definition "a building or buildings housing a center, institute, foundation, hospital, prison, mission, courthouse, etc."@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.FCL" ;
+    skos:prefLabel "facility"@en .
+
+gn:S.FNDY a gn:Code ;
+    skos:definition "a building or works where metal casting is carried out"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.FNDY" ;
+    skos:prefLabel "foundry"@en .
+
+gn:S.FRM a gn:Code ;
+    skos:definition "a tract of land with associated buildings devoted to agriculture"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.FRM" ;
+    skos:prefLabel "farm"@en .
+
+gn:S.FRMQ a gn:Code ;
+    skos:inScheme gn:S ;
+    skos:notation "S.FRMQ" ;
+    skos:prefLabel "abandoned farm"@en .
+
+gn:S.FRMS a gn:Code ;
+    skos:definition "tracts of land with associated buildings devoted to agriculture"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.FRMS" ;
+    skos:prefLabel "farms"@en .
+
+gn:S.FRMT a gn:Code ;
+    skos:definition "the buildings and adjacent service areas of a farm"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.FRMT" ;
+    skos:prefLabel "farmstead"@en .
+
+gn:S.FT a gn:Code ;
+    skos:definition "a defensive structure or earthworks"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.FT" ;
+    skos:prefLabel "fort"@en .
+
+gn:S.FY a gn:Code ;
+    skos:definition "a boat or other floating conveyance and terminal facilities regularly used to transport people and vehicles across a waterbody"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.FY" ;
+    skos:prefLabel "ferry"@en .
+
+gn:S.GATE a gn:Code ;
+    skos:definition "a controlled access entrance or exit"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.GATE" ;
+    skos:prefLabel "gate"@en .
+
+gn:S.GDN a gn:Code ;
+    skos:definition "an enclosure for displaying selected plant or animal life"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.GDN" ;
+    skos:prefLabel "garden(s)"@en .
+
+gn:S.GHAT a gn:Code ;
+    skos:definition "a set of steps leading to a river, which are of religious significance, and at their base is usually a platform for bathing"@en ;
+    skos:historyNote "Added in v3.0"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.GHAT" ;
+    skos:prefLabel "ghat"@en .
+
+gn:S.GHSE a gn:Code ;
+    skos:definition "a house used to provide lodging for paying guests"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.GHSE" ;
+    skos:prefLabel "guest house"@en .
+
+gn:S.GOSP a gn:Code ;
+    skos:definition "a facility for separating gas from oil"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.GOSP" ;
+    skos:prefLabel "gas-oil separator plant"@en .
+
+gn:S.GOVL a gn:Code ;
+    skos:definition "a facility housing local governmental offices, usually a city, town, or village hall"@en ;
+    skos:historyNote "Added in v3.0"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.GOVL" ;
+    skos:prefLabel "local government office"@en .
+
+gn:S.GRVE a gn:Code ;
+    skos:definition "a burial site"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.GRVE" ;
+    skos:prefLabel "grave"@en .
+
+gn:S.HERM a gn:Code ;
+    skos:definition "a secluded residence, usually for religious sects"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.HERM" ;
+    skos:prefLabel "hermitage"@en .
+
+gn:S.HLT a gn:Code ;
+    skos:definition "a place where caravans stop for rest"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.HLT" ;
+    skos:prefLabel "halting place"@en .
+
+gn:S.HMSD a gn:Code ;
+    skos:definition "a residence, owner's or manager's, on a sheep or cattle station, woolshed, outcamp, or Aboriginal outstation, specific to Australia and New Zealand" ;
+    skos:historyNote "Added in v3.1"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.HMSD" ;
+    skos:prefLabel "homestead"@en .
+
+gn:S.HSE a gn:Code ;
+    skos:definition "a building used as a human habitation"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.HSE" ;
+    skos:prefLabel "house(s)"@en .
+
+gn:S.HSEC a gn:Code ;
+    skos:definition "a large house, mansion, or chateau, on a large estate"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.HSEC" ;
+    skos:prefLabel "country house"@en .
+
+gn:S.HSP a gn:Code ;
+    skos:definition "a building in which sick or injured, especially those confined to bed, are medically treated"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.HSP" ;
+    skos:prefLabel "hospital"@en .
+
+gn:S.HSPC a gn:Code ;
+    skos:definition "a medical facility associated with a hospital for outpatients"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.HSPC" ;
+    skos:prefLabel "clinic"@en .
+
+gn:S.HSPD a gn:Code ;
+    skos:definition "a building where medical or dental aid is dispensed"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.HSPD" ;
+    skos:prefLabel "dispensary"@en .
+
+gn:S.HSPL a gn:Code ;
+    skos:definition "an asylum or hospital for lepers"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.HSPL" ;
+    skos:prefLabel "leprosarium"@en .
+
+gn:S.HSTS a gn:Code ;
+    skos:definition "a place of historical importance"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.HSTS" ;
+    skos:prefLabel "historical site"@en .
+
+gn:S.HTL a gn:Code ;
+    skos:definition "a building providing lodging and/or meals for the public"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.HTL" ;
+    skos:prefLabel "hotel"@en .
+
+gn:S.HUT a gn:Code ;
+    skos:definition "a small primitive house"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.HUT" ;
+    skos:prefLabel "hut"@en .
+
+gn:S.HUTS a gn:Code ;
+    skos:definition "small primitive houses"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.HUTS" ;
+    skos:prefLabel "huts"@en .
+
+gn:S.INSM a gn:Code ;
+    skos:definition "a facility for use of and control by armed forces"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.INSM" ;
+    skos:prefLabel "military installation"@en .
+
+gn:S.ITTR a gn:Code ;
+    skos:definition "a facility where research is carried out"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.ITTR" ;
+    skos:prefLabel "research institute"@en .
+
+gn:S.JTY a gn:Code ;
+    skos:definition "a structure built out into the water at a river mouth or harbor entrance to regulate currents and silting"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.JTY" ;
+    skos:prefLabel "jetty"@en .
+
+gn:S.LDNG a gn:Code ;
+    skos:definition "a place where boats receive or discharge passengers and freight, but lacking most port facilities"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.LDNG" ;
+    skos:prefLabel "landing"@en .
+
+gn:S.LEPC a gn:Code ;
+    skos:definition "a settled area inhabited by lepers in relative isolation"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.LEPC" ;
+    skos:prefLabel "leper colony"@en .
+
+gn:S.LIBR a gn:Code ;
+    skos:definition "A place in which information resources such as books are kept for reading, reference, or lending."@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.LIBR" ;
+    skos:prefLabel "library"@en .
+
+gn:S.LNDF a gn:Code ;
+    skos:definition "a place for trash and garbage disposal in which the waste is buried between layers of earth to build up low-lying land"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.LNDF" ;
+    skos:prefLabel "landfill"@en .
+
+gn:S.LOCK a gn:Code ;
+    skos:definition "a basin in a waterway with gates at each end by means of which vessels are passed from one water level to another"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.LOCK" ;
+    skos:prefLabel "lock(s)"@en .
+
+gn:S.LTHSE a gn:Code ;
+    skos:definition "a distinctive structure exhibiting a major navigation light"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.LTHSE" ;
+    skos:prefLabel "lighthouse"@en .
+
+gn:S.MALL a gn:Code ;
+    skos:definition "A large, often enclosed shopping complex containing various stores, businesses, and restaurants usually accessible by common passageways."@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MALL" ;
+    skos:prefLabel "mall"@en .
+
+gn:S.MAR a gn:Code ;
+    skos:definition "a harbor facility for small boats, yachts, etc."@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MAR" ;
+    skos:prefLabel "marina"@en .
+
+gn:S.MFG a gn:Code ;
+    skos:definition "one or more buildings where goods are manufactured, processed or fabricated"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MFG" ;
+    skos:prefLabel "factory"@en .
+
+gn:S.MFGB a gn:Code ;
+    skos:definition "one or more buildings where beer is brewed"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MFGB" ;
+    skos:prefLabel "brewery"@en .
+
+gn:S.MFGC a gn:Code ;
+    skos:definition "a building where food items are canned"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MFGC" ;
+    skos:prefLabel "cannery"@en .
+
+gn:S.MFGCU a gn:Code ;
+    skos:definition "a facility for processing copper ore"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MFGCU" ;
+    skos:prefLabel "copper works"@en .
+
+gn:S.MFGLM a gn:Code ;
+    skos:definition "a furnace in which limestone is reduced to lime"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MFGLM" ;
+    skos:prefLabel "limekiln"@en .
+
+gn:S.MFGM a gn:Code ;
+    skos:definition "a factory where ammunition is made"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MFGM" ;
+    skos:prefLabel "munitions plant"@en .
+
+gn:S.MFGPH a gn:Code ;
+    skos:definition "a facility for producing fertilizer"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MFGPH" ;
+    skos:prefLabel "phosphate works"@en .
+
+gn:S.MFGQ a gn:Code ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MFGQ" ;
+    skos:prefLabel "abandoned factory"@en .
+
+gn:S.MFGSG a gn:Code ;
+    skos:definition "a facility for converting raw sugar into refined sugar"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MFGSG" ;
+    skos:prefLabel "sugar refinery"@en .
+
+gn:S.MKT a gn:Code ;
+    skos:definition "a place where goods are bought and sold at regular intervals"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MKT" ;
+    skos:prefLabel "market"@en .
+
+gn:S.ML a gn:Code ;
+    skos:definition "a building housing machines for transforming, shaping, finishing, grinding, or extracting products"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.ML" ;
+    skos:prefLabel "mill(s)"@en .
+
+gn:S.MLM a gn:Code ;
+    skos:definition "a facility for improving the metal content of ore by concentration"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MLM" ;
+    skos:prefLabel "ore treatment plant"@en .
+
+gn:S.MLO a gn:Code ;
+    skos:definition "a mill where oil is extracted from olives"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MLO" ;
+    skos:prefLabel "olive oil mill"@en .
+
+gn:S.MLSG a gn:Code ;
+    skos:definition "a facility where sugar cane is processed into raw sugar"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MLSG" ;
+    skos:prefLabel "sugar mill"@en .
+
+gn:S.MLSGQ a gn:Code ;
+    skos:definition "a sugar mill no longer used as a sugar mill"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MLSGQ" ;
+    skos:prefLabel "former sugar mill"@en .
+
+gn:S.MLSW a gn:Code ;
+    skos:definition "a mill where logs or lumber are sawn to specified shapes and sizes"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MLSW" ;
+    skos:prefLabel "sawmill"@en .
+
+gn:S.MLWND a gn:Code ;
+    skos:definition "a mill or water pump powered by wind"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MLWND" ;
+    skos:prefLabel "windmill"@en .
+
+gn:S.MLWTR a gn:Code ;
+    skos:definition "a mill powered by running water"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MLWTR" ;
+    skos:prefLabel "water mill"@en .
+
+gn:S.MN a gn:Code ;
+    skos:definition "a site where mineral ores are extracted from the ground by excavating surface pits and subterranean passages"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MN" ;
+    skos:prefLabel "mine(s)"@en .
+
+gn:S.MNAU a gn:Code ;
+    skos:definition "a mine where gold ore, or alluvial gold is extracted"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MNAU" ;
+    skos:prefLabel "gold mine(s)"@en .
+
+gn:S.MNC a gn:Code ;
+    skos:definition "a mine where coal is extracted"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MNC" ;
+    skos:prefLabel "coal mine(s)"@en .
+
+gn:S.MNCR a gn:Code ;
+    skos:definition "a mine where chrome ore is extracted"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MNCR" ;
+    skos:prefLabel "chrome mine(s)"@en .
+
+gn:S.MNCU a gn:Code ;
+    skos:definition "a mine where copper ore is extracted"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MNCU" ;
+    skos:prefLabel "copper mine(s)"@en .
+
+gn:S.MNDT a gn:Code ;
+    owl:deprecated true ;
+    skos:definition "a place where diatomaceous earth is extracted"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MNDT" ;
+    skos:prefLabel "diatomite mine(s)"@en .
+
+gn:S.MNFE a gn:Code ;
+    skos:definition "a mine where iron ore is extracted"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MNFE" ;
+    skos:prefLabel "iron mine(s)"@en .
+
+gn:S.MNMT a gn:Code ;
+    skos:definition "a commemorative structure or statue"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MNMT" ;
+    skos:prefLabel "monument"@en .
+
+gn:S.MNN a gn:Code ;
+    skos:definition "a mine from which salt is extracted"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MNN" ;
+    skos:prefLabel "salt mine(s)"@en .
+
+gn:S.MNNI a gn:Code ;
+    owl:deprecated true ;
+    skos:definition "a mine where nickel ore is extracted"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MNNI" ;
+    skos:prefLabel "nickel mine(s)"@en .
+
+gn:S.MNPB a gn:Code ;
+    owl:deprecated true ;
+    skos:definition "a mine where lead ore is extracted"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MNPB" ;
+    skos:prefLabel "lead mine(s)"@en .
+
+gn:S.MNPL a gn:Code ;
+    owl:deprecated true ;
+    skos:definition "a place where heavy metals are concentrated and running water is used to extract them from unconsolidated sediments"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MNPL" ;
+    skos:prefLabel "placer mine(s)"@en .
+
+gn:S.MNQ a gn:Code ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MNQ" ;
+    skos:prefLabel "abandoned mine"@en .
+
+gn:S.MNQR a gn:Code ;
+    skos:definition "a surface mine where building stone or gravel and sand, etc. are extracted"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MNQR" ;
+    skos:prefLabel "quarry(-ies)"@en .
+
+gn:S.MNSN a gn:Code ;
+    owl:deprecated true ;
+    skos:definition "a mine where tin ore is extracted"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MNSN" ;
+    skos:prefLabel "tin mine(s)"@en .
+
+gn:S.MOLE a gn:Code ;
+    skos:definition "a massive structure of masonry or large stones serving as a pier or breakwater"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MOLE" ;
+    skos:prefLabel "mole"@en .
+
+gn:S.MSQE a gn:Code ;
+    skos:definition "a building for public Islamic worship"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MSQE" ;
+    skos:prefLabel "mosque"@en .
+
+gn:S.MSSN a gn:Code ;
+    skos:definition "a place characterized by dwellings, school, church, hospital and other facilities operated by a religious group for the purpose of providing charitable services and to propagate religion"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MSSN" ;
+    skos:prefLabel "mission"@en .
+
+gn:S.MSSNQ a gn:Code ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MSSNQ" ;
+    skos:prefLabel "abandoned mission"@en .
+
+gn:S.MSTY a gn:Code ;
+    skos:definition "a building and grounds where a community of monks lives in seclusion"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MSTY" ;
+    skos:prefLabel "monastery"@en .
+
+gn:S.MTRO a gn:Code ;
+    skos:definition "metro station (Underground, Tube, or Métro)"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MTRO" ;
+    skos:prefLabel "metro station"@en .
+
+gn:S.MUS a gn:Code ;
+    skos:definition "a building where objects of permanent interest in one or more of the arts and sciences are preserved and exhibited"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.MUS" ;
+    skos:prefLabel "museum"@en .
+
+gn:S.NOV a gn:Code ;
+    skos:definition "a religious house or school where novices are trained"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.NOV" ;
+    skos:prefLabel "novitiate"@en .
+
+gn:S.NSY a gn:Code ;
+    skos:definition "a place where plants are propagated for transplanting or grafting"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.NSY" ;
+    skos:prefLabel "nursery(-ies)"@en .
+
+gn:S.OBPT a gn:Code ;
+    skos:definition "a wildlife or scenic observation point"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.OBPT" ;
+    skos:prefLabel "observation point"@en .
+
+gn:S.OBS a gn:Code ;
+    skos:definition "a facility equipped for observation of atmospheric or space phenomena"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.OBS" ;
+    skos:prefLabel "observatory"@en .
+
+gn:S.OBSR a gn:Code ;
+    skos:definition "a facility equipped with an array of antennae for receiving radio waves from space"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.OBSR" ;
+    skos:prefLabel "radio observatory"@en .
+
+gn:S.OILJ a gn:Code ;
+    skos:definition "a section of an oil pipeline where two or more pipes join together"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.OILJ" ;
+    skos:prefLabel "oil pipeline junction"@en .
+
+gn:S.OILQ a gn:Code ;
+    skos:inScheme gn:S ;
+    skos:notation "S.OILQ" ;
+    skos:prefLabel "abandoned oil well"@en .
+
+gn:S.OILR a gn:Code ;
+    skos:definition "a facility for converting crude oil into refined petroleum products"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.OILR" ;
+    skos:prefLabel "oil refinery"@en .
+
+gn:S.OILT a gn:Code ;
+    skos:definition "a tract of land occupied by large, cylindrical, metal tanks in which oil or liquid petrochemicals are stored"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.OILT" ;
+    skos:prefLabel "tank farm"@en .
+
+gn:S.OILW a gn:Code ;
+    skos:definition "a well from which oil may be pumped"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.OILW" ;
+    skos:prefLabel "oil well"@en .
+
+gn:S.OPRA a gn:Code ;
+    skos:definition "A theater designed chiefly for the performance of operas."@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.OPRA" ;
+    skos:prefLabel "opera house"@en .
+
+gn:S.PAL a gn:Code ;
+    skos:definition "a large stately house, often a royal or presidential residence"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.PAL" ;
+    skos:prefLabel "palace"@en .
+
+gn:S.PGDA a gn:Code ;
+    skos:definition "a tower-like storied structure, usually a Buddhist shrine"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.PGDA" ;
+    skos:prefLabel "pagoda"@en .
+
+gn:S.PIER a gn:Code ;
+    skos:definition "a structure built out into navigable water on piles providing berthing for ships and recreation"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.PIER" ;
+    skos:prefLabel "pier"@en .
+
+gn:S.PKLT a gn:Code ;
+    skos:definition "an area used for parking vehicles"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.PKLT" ;
+    skos:prefLabel "parking lot"@en .
+
+gn:S.PMPO a gn:Code ;
+    skos:definition "a facility for pumping oil through a pipeline"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.PMPO" ;
+    skos:prefLabel "oil pumping station"@en .
+
+gn:S.PMPW a gn:Code ;
+    skos:definition "a facility for pumping water from a major well or through a pipeline"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.PMPW" ;
+    skos:prefLabel "water pumping station"@en .
+
+gn:S.PO a gn:Code ;
+    skos:definition "a public building in which mail is received, sorted and distributed"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.PO" ;
+    skos:prefLabel "post office"@en .
+
+gn:S.PP a gn:Code ;
+    skos:definition "a building in which police are stationed"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.PP" ;
+    skos:prefLabel "police post"@en .
+
+gn:S.PPQ a gn:Code ;
+    skos:inScheme gn:S ;
+    skos:notation "S.PPQ" ;
+    skos:prefLabel "abandoned police post"@en .
+
+gn:S.PRKGT a gn:Code ;
+    skos:definition "a controlled access to a park"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.PRKGT" ;
+    skos:prefLabel "park gate"@en .
+
+gn:S.PRKHQ a gn:Code ;
+    skos:definition "a park administrative facility"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.PRKHQ" ;
+    skos:prefLabel "park headquarters"@en .
+
+gn:S.PRN a gn:Code ;
+    skos:definition "a facility for confining prisoners"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.PRN" ;
+    skos:prefLabel "prison"@en .
+
+gn:S.PRNJ a gn:Code ;
+    skos:definition "a facility for confining, training, and reforming young law offenders"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.PRNJ" ;
+    skos:prefLabel "reformatory"@en .
+
+gn:S.PRNQ a gn:Code ;
+    skos:inScheme gn:S ;
+    skos:notation "S.PRNQ" ;
+    skos:prefLabel "abandoned prison"@en .
+
+gn:S.PS a gn:Code ;
+    skos:definition "a facility for generating electric power"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.PS" ;
+    skos:prefLabel "power station"@en .
+
+gn:S.PSH a gn:Code ;
+    skos:definition "a building where electricity is generated from water power"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.PSH" ;
+    skos:prefLabel "hydroelectric power station"@en .
+
+gn:S.PSTB a gn:Code ;
+    skos:definition "a post or station at an international boundary for the regulation of movement of people and goods"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.PSTB" ;
+    skos:prefLabel "border post"@en .
+
+gn:S.PSTC a gn:Code ;
+    skos:definition "a building at an international boundary where customs and duties are paid on goods"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.PSTC" ;
+    skos:prefLabel "customs post"@en .
+
+gn:S.PSTP a gn:Code ;
+    skos:definition "a post from which patrols are sent out"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.PSTP" ;
+    skos:prefLabel "patrol post"@en .
+
+gn:S.PYR a gn:Code ;
+    skos:definition "an ancient massive structure of square ground plan with four triangular faces meeting at a point and used for enclosing tombs"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.PYR" ;
+    skos:prefLabel "pyramid"@en .
+
+gn:S.PYRS a gn:Code ;
+    skos:definition "ancient massive structures of square ground plan with four triangular faces meeting at a point and used for enclosing tombs"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.PYRS" ;
+    skos:prefLabel "pyramids"@en .
+
+gn:S.QUAY a gn:Code ;
+    skos:definition "a structure of solid construction along a shore or bank which provides berthing for ships and which generally provides cargo handling facilities"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.QUAY" ;
+    skos:prefLabel "quay"@en .
+
+gn:S.RDCR a gn:Code ;
+    skos:definition "a road junction formed around a central circle about which traffic moves in one direction only"@en ;
+    skos:historyNote "Added in v3.0"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.RDCR" ;
+    skos:prefLabel "traffic circle"@en .
+
+gn:S.RECG a gn:Code ;
+    skos:definition "a recreation field where golf is played"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.RECG" ;
+    skos:prefLabel "golf course"@en .
+
+gn:S.RECR a gn:Code ;
+    skos:definition "a track where races are held"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.RECR" ;
+    skos:prefLabel "racetrack"@en .
+
+gn:S.REST a gn:Code ;
+    skos:definition "A place where meals are served to the public"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.REST" ;
+    skos:prefLabel "restaurant"@en .
+
+gn:S.RET a gn:Code ;
+    skos:definition "a building where goods and/or services are offered for sale"@en ;
+    skos:historyNote "Added in v3.0"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.RET" ;
+    skos:prefLabel "store"@en .
+
+gn:S.RHSE a gn:Code ;
+    skos:definition "a structure maintained for the rest and shelter of travelers"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.RHSE" ;
+    skos:prefLabel "resthouse"@en .
+
+gn:S.RKRY a gn:Code ;
+    skos:definition "a breeding place of a colony of birds or seals"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.RKRY" ;
+    skos:prefLabel "rookery"@en .
+
+gn:S.RLG a gn:Code ;
+    skos:definition "an ancient site of significant religious importance"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.RLG" ;
+    skos:prefLabel "religious site"@en .
+
+gn:S.RLGR a gn:Code ;
+    skos:definition "a place of temporary seclusion, especially for religious groups"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.RLGR" ;
+    skos:prefLabel "retreat"@en .
+
+gn:S.RNCH a gn:Code ;
+    skos:definition "a large farm specializing in extensive grazing of livestock"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.RNCH" ;
+    skos:prefLabel "ranch(es)"@en .
+
+gn:S.RSD a gn:Code ;
+    skos:definition "a short track parallel to and joining the main track"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.RSD" ;
+    skos:prefLabel "railroad siding"@en .
+
+gn:S.RSGNL a gn:Code ;
+    skos:definition "a signal at the entrance of a particular section of track governing the movement of trains"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.RSGNL" ;
+    skos:prefLabel "railroad signal"@en .
+
+gn:S.RSRT a gn:Code ;
+    skos:definition "a specialized facility for vacation, health, or participation sports activities"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.RSRT" ;
+    skos:prefLabel "resort"@en .
+
+gn:S.RSTN a gn:Code ;
+    skos:definition "a facility comprising ticket office, platforms, etc. for loading and unloading train passengers and freight"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.RSTN" ;
+    skos:prefLabel "railroad station"@en .
+
+gn:S.RSTNQ a gn:Code ;
+    skos:inScheme gn:S ;
+    skos:notation "S.RSTNQ" ;
+    skos:prefLabel "abandoned railroad station"@en .
+
+gn:S.RSTP a gn:Code ;
+    skos:definition "a place lacking station facilities where trains stop to pick up and unload passengers and freight"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.RSTP" ;
+    skos:prefLabel "railroad stop"@en .
+
+gn:S.RSTPQ a gn:Code ;
+    skos:inScheme gn:S ;
+    skos:notation "S.RSTPQ" ;
+    skos:prefLabel "abandoned railroad stop"@en .
+
+gn:S.RUIN a gn:Code ;
+    skos:definition "a destroyed or decayed structure which is no longer functional"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.RUIN" ;
+    skos:prefLabel "ruin(s)"@en .
+
+gn:S.SCH a gn:Code ;
+    skos:definition "building(s) where instruction in one or more branches of knowledge takes place"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.SCH" ;
+    skos:prefLabel "school"@en .
+
+gn:S.SCHA a gn:Code ;
+    skos:definition "a school with a curriculum focused on agriculture"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.SCHA" ;
+    skos:prefLabel "agricultural school"@en .
+
+gn:S.SCHC a gn:Code ;
+    skos:definition "the grounds and buildings of an institution of higher learning"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.SCHC" ;
+    skos:prefLabel "college"@en .
+
+gn:S.SCHD a gn:Code ;
+    owl:deprecated true ;
+    skos:definition "Driving School"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.SCHD" ;
+    skos:prefLabel "Driving School"@en .
+
+gn:S.SCHL a gn:Code ;
+    skos:definition "Language Schools & Institutions"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.SCHL" ;
+    skos:prefLabel "Language School"@en,
+        "language school"@en .
+
+gn:S.SCHM a gn:Code ;
+    skos:definition "a school at which military science forms the core of the curriculum"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.SCHM" ;
+    skos:prefLabel "military school"@en .
+
+gn:S.SCHN a gn:Code ;
+    skos:definition "a school at which maritime sciences form the core of the curriculum"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.SCHN" ;
+    skos:prefLabel "maritime school"@en .
+
+gn:S.SCHT a gn:Code ;
+    skos:definition "post-secondary school with a specifically technical or vocational curriculum"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.SCHT" ;
+    skos:prefLabel "technical school"@en .
+
+gn:S.SECP a gn:Code ;
+    skos:definition "state exam preparation centres"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.SECP" ;
+    skos:prefLabel "State Exam Prep Centre"@en .
+
+gn:S.SHPF a gn:Code ;
+    skos:definition "a fence or wall enclosure for sheep and other small herd animals"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.SHPF" ;
+    skos:prefLabel "sheepfold"@en .
+
+gn:S.SHRN a gn:Code ;
+    skos:definition "a structure or place memorializing a person or religious concept"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.SHRN" ;
+    skos:prefLabel "shrine"@en .
+
+gn:S.SHSE a gn:Code ;
+    skos:definition "a building for storing goods, especially provisions"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.SHSE" ;
+    skos:prefLabel "storehouse"@en .
+
+gn:S.SLCE a gn:Code ;
+    skos:definition "a conduit or passage for carrying off surplus water from a waterbody, usually regulated by means of a sluice gate"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.SLCE" ;
+    skos:prefLabel "sluice"@en .
+
+gn:S.SNTR a gn:Code ;
+    skos:definition "a facility where victims of physical or mental disorders are treated"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.SNTR" ;
+    skos:prefLabel "sanatorium"@en .
+
+gn:S.SPA a gn:Code ;
+    skos:definition "a resort area usually developed around a medicinal spring"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.SPA" ;
+    skos:prefLabel "spa"@en .
+
+gn:S.SPLY a gn:Code ;
+    skos:definition "a passage or outlet through which surplus water flows over, around or through a dam"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.SPLY" ;
+    skos:prefLabel "spillway"@en .
+
+gn:S.SQR a gn:Code ;
+    skos:definition "a broad, open, public area near the center of a town or city"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.SQR" ;
+    skos:prefLabel "square"@en .
+
+gn:S.STBL a gn:Code ;
+    skos:definition "a building for the shelter and feeding of farm animals, especially horses"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.STBL" ;
+    skos:prefLabel "stable"@en .
+
+gn:S.STDM a gn:Code ;
+    skos:definition "a structure with an enclosure for athletic games with tiers of seats for spectators"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.STDM" ;
+    skos:prefLabel "stadium"@en .
+
+gn:S.STNB a gn:Code ;
+    skos:definition "a scientific facility used as a base from which research is carried out or monitored"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.STNB" ;
+    skos:prefLabel "scientific research base"@en .
+
+gn:S.STNC a gn:Code ;
+    skos:definition "a facility from which the coast is guarded by armed vessels"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.STNC" ;
+    skos:prefLabel "coast guard station"@en .
+
+gn:S.STNE a gn:Code ;
+    skos:definition "a facility for carrying out experiments"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.STNE" ;
+    skos:prefLabel "experiment station"@en .
+
+gn:S.STNF a gn:Code ;
+    skos:definition "a collection of buildings and facilities for carrying out forest management"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.STNF" ;
+    skos:prefLabel "forest station"@en .
+
+gn:S.STNI a gn:Code ;
+    skos:definition "a station at which vehicles, goods, and people are inspected"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.STNI" ;
+    skos:prefLabel "inspection station"@en .
+
+gn:S.STNM a gn:Code ;
+    skos:definition "a station at which weather elements are recorded"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.STNM" ;
+    skos:prefLabel "meteorological station"@en .
+
+gn:S.STNR a gn:Code ;
+    skos:definition "a facility for producing and transmitting information by radio waves"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.STNR" ;
+    skos:prefLabel "radio station"@en .
+
+gn:S.STNS a gn:Code ;
+    skos:definition "a facility for tracking and communicating with orbiting satellites"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.STNS" ;
+    skos:prefLabel "satellite station"@en .
+
+gn:S.STNW a gn:Code ;
+    skos:definition "a facility for butchering whales and processing train oil"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.STNW" ;
+    skos:prefLabel "whaling station"@en .
+
+gn:S.STPS a gn:Code ;
+    skos:definition "stones or slabs placed for ease in ascending or descending a steep slope"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.STPS" ;
+    skos:prefLabel "steps"@en .
+
+gn:S.SWT a gn:Code ;
+    skos:definition "facility for the processing of sewage and/or wastewater"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.SWT" ;
+    skos:prefLabel "sewage treatment plant"@en .
+
+gn:S.THTR a gn:Code ;
+    skos:definition "A building, room, or outdoor structure for the presentation of plays, films, or other dramatic performances"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.THTR" ;
+    skos:prefLabel "theater"@en .
+
+gn:S.TMB a gn:Code ;
+    skos:definition "a structure for interring bodies"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.TMB" ;
+    skos:prefLabel "tomb(s)"@en .
+
+gn:S.TMPL a gn:Code ;
+    skos:definition "an edifice dedicated to religious worship"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.TMPL" ;
+    skos:prefLabel "temple(s)"@en .
+
+gn:S.TNKD a gn:Code ;
+    skos:definition "a small artificial pond used for immersing cattle in chemically treated water for disease control"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.TNKD" ;
+    skos:prefLabel "cattle dipping tank"@en .
+
+gn:S.TOWR a gn:Code ;
+    skos:definition "a high conspicuous structure, typically much higher than its diameter"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.TOWR" ;
+    skos:prefLabel "tower"@en .
+
+gn:S.TRANT a gn:Code ;
+    skos:definition "facilities for the handling of vehicular freight and passengers"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.TRANT" ;
+    skos:prefLabel "transit terminal"@en .
+
+gn:S.TRIG a gn:Code ;
+    skos:definition "a point on the earth whose position has been determined by triangulation"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.TRIG" ;
+    skos:prefLabel "triangulation station"@en .
+
+gn:S.TRMO a gn:Code ;
+    skos:definition "a tank farm or loading facility at the end of an oil pipeline"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.TRMO" ;
+    skos:prefLabel "oil pipeline terminal"@en .
+
+gn:S.TWO a gn:Code ;
+    skos:definition "Temporary Work Offices"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.TWO" ;
+    skos:prefLabel "temp work office"@en .
+
+gn:S.UNIO a gn:Code ;
+    owl:deprecated true ;
+    skos:definition "Post Universitary Education Institutes (post graduate studies and highly specialised master programs) & MBA"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.UNIO" ;
+    skos:prefLabel "postgrad & MBA"@en .
+
+gn:S.UNIP a gn:Code ;
+    skos:definition "University Preparation Schools & Institutions"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.UNIP" ;
+    skos:prefLabel "university prep school"@en .
+
+gn:S.UNIV a gn:Code ;
+    skos:definition "An institution for higher learning with teaching and research facilities constituting a graduate school and professional schools that award master's degrees and doctorates and an undergraduate division that awards bachelor's degrees."@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.UNIV" ;
+    skos:prefLabel "university"@en .
+
+gn:S.USGE a gn:Code ;
+    skos:definition "a facility operated by the United States Government in Panama"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.USGE" ;
+    skos:prefLabel "united states government establishment"@en .
+
+gn:S.VETF a gn:Code ;
+    skos:definition "a building or camp at which veterinary services are available"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.VETF" ;
+    skos:prefLabel "veterinary facility"@en .
+
+gn:S.WALL a gn:Code ;
+    skos:definition "a thick masonry structure, usually enclosing a field or building, or forming the side of a structure"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.WALL" ;
+    skos:prefLabel "wall"@en .
+
+gn:S.WALLA a gn:Code ;
+    skos:definition "the remains of a linear defensive stone structure"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.WALLA" ;
+    skos:prefLabel "ancient wall"@en .
+
+gn:S.WEIR a gn:Code ;
+    skos:definition "a small dam in a stream, designed to raise the water level or to divert stream flow through a desired channel"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.WEIR" ;
+    skos:prefLabel "weir(s)"@en .
+
+gn:S.WHRF a gn:Code ;
+    skos:definition "a structure of open rather than solid construction along a shore or a bank which provides berthing for ships and cargo-handling facilities"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.WHRF" ;
+    skos:prefLabel "wharf(-ves)"@en .
+
+gn:S.WRCK a gn:Code ;
+    skos:definition "the site of the remains of a wrecked vessel"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.WRCK" ;
+    skos:prefLabel "wreck"@en .
+
+gn:S.WTRW a gn:Code ;
+    skos:definition "a facility for supplying potable water through a water source and a system of pumps and filtration beds"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.WTRW" ;
+    skos:prefLabel "waterworks"@en .
+
+gn:S.ZNF a gn:Code ;
+    skos:definition "an area, usually a section of a port, where goods may be received and shipped free of customs duty and of most customs regulations"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.ZNF" ;
+    skos:prefLabel "free trade zone"@en .
+
+gn:S.ZOO a gn:Code ;
+    skos:definition "a zoological garden or park where wild animals are kept for exhibition"@en ;
+    skos:inScheme gn:S ;
+    skos:notation "S.ZOO" ;
+    skos:prefLabel "zoo"@en .
+
+gn:T.ASPH a gn:Code ;
+    skos:definition "a small basin containing naturally occurring asphalt"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.ASPH" ;
+    skos:prefLabel "asphalt lake"@en .
+
+gn:T.ATOL a gn:Code ;
+    skos:definition "a ring-shaped coral reef which has closely spaced islands on it encircling a lagoon"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.ATOL" ;
+    skos:prefLabel "atoll(s)"@en .
+
+gn:T.BAR a gn:Code ;
+    skos:definition "a shallow ridge or mound of coarse unconsolidated material in a stream channel, at the mouth of a stream, estuary, or lagoon and in the wave-break zone along coasts"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.BAR" ;
+    skos:prefLabel "bar"@en .
+
+gn:T.BCH a gn:Code ;
+    skos:definition "a shore zone of coarse unconsolidated sediment that extends from the low-water line to the highest reach of storm waves"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.BCH" ;
+    skos:prefLabel "beach"@en .
+
+gn:T.BCHS a gn:Code ;
+    skos:definition "a shore zone of coarse unconsolidated sediment that extends from the low-water line to the highest reach of storm waves"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.BCHS" ;
+    skos:prefLabel "beaches"@en .
+
+gn:T.BDLD a gn:Code ;
+    skos:definition "an area characterized by a maze of very closely spaced, deep, narrow, steep-sided ravines, and sharp crests and pinnacles"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.BDLD" ;
+    skos:prefLabel "badlands"@en .
+
+gn:T.BLDR a gn:Code ;
+    skos:definition "a high altitude or high latitude bare, flat area covered with large angular rocks"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.BLDR" ;
+    skos:prefLabel "boulder field"@en .
+
+gn:T.BLHL a gn:Code ;
+    skos:definition "a hole in coastal rock through which sea water is forced by a rising tide or waves and spurted through an outlet into the air"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.BLHL" ;
+    skos:prefLabel "blowhole(s)"@en .
+
+gn:T.BLOW a gn:Code ;
+    skos:definition "a small depression in sandy terrain, caused by wind erosion"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.BLOW" ;
+    skos:prefLabel "blowout(s)"@en .
+
+gn:T.BNCH a gn:Code ;
+    skos:definition "a long, narrow bedrock platform bounded by steeper slopes above and below, usually overlooking a waterbody"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.BNCH" ;
+    skos:prefLabel "bench"@en .
+
+gn:T.BUTE a gn:Code ;
+    skos:definition "a small, isolated, usually flat-topped hill with steep sides"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.BUTE" ;
+    skos:prefLabel "butte(s)"@en .
+
+gn:T.CAPE a gn:Code ;
+    skos:definition "a land area, more prominent than a point, projecting into the sea and marking a notable change in coastal direction"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.CAPE" ;
+    skos:prefLabel "cape"@en .
+
+gn:T.CFT a gn:Code ;
+    skos:definition "a deep narrow slot, notch, or groove in a coastal cliff"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.CFT" ;
+    skos:prefLabel "cleft(s)"@en .
+
+gn:T.CLDA a gn:Code ;
+    skos:definition "a depression measuring kilometers across formed by the collapse of a volcanic mountain"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.CLDA" ;
+    skos:prefLabel "caldera"@en .
+
+gn:T.CLF a gn:Code ;
+    skos:definition "a high, steep to perpendicular slope overlooking a waterbody or lower area"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.CLF" ;
+    skos:prefLabel "cliff(s)"@en .
+
+gn:T.CNYN a gn:Code ;
+    skos:definition "a deep, narrow valley with steep sides cutting into a plateau or mountainous area"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.CNYN" ;
+    skos:prefLabel "canyon"@en .
+
+gn:T.CONE a gn:Code ;
+    skos:definition "a conical landform composed of mud or volcanic material"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.CONE" ;
+    skos:prefLabel "cone(s)"@en .
+
+gn:T.CRDR a gn:Code ;
+    skos:definition "a strip or area of land having significance as an access way"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.CRDR" ;
+    skos:prefLabel "corridor"@en .
+
+gn:T.CRQ a gn:Code ;
+    skos:definition "a bowl-like hollow partially surrounded by cliffs or steep slopes at the head of a glaciated valley"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.CRQ" ;
+    skos:prefLabel "cirque"@en .
+
+gn:T.CRQS a gn:Code ;
+    skos:definition "bowl-like hollows partially surrounded by cliffs or steep slopes at the head of a glaciated valley"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.CRQS" ;
+    skos:prefLabel "cirques"@en .
+
+gn:T.CRTR a gn:Code ;
+    skos:definition "a generally circular saucer or bowl-shaped depression caused by volcanic or meteorite explosive action"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.CRTR" ;
+    skos:prefLabel "crater(s)"@en .
+
+gn:T.CUET a gn:Code ;
+    skos:definition "an asymmetric ridge formed on tilted strata"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.CUET" ;
+    skos:prefLabel "cuesta(s)"@en .
+
+gn:T.DLTA a gn:Code ;
+    skos:definition "a flat plain formed by alluvial deposits at the mouth of a stream"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.DLTA" ;
+    skos:prefLabel "delta"@en .
+
+gn:T.DPR a gn:Code ;
+    skos:definition "a low area surrounded by higher land and usually characterized by interior drainage"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.DPR" ;
+    skos:prefLabel "depression(s)"@en .
+
+gn:T.DSRT a gn:Code ;
+    skos:definition "a large area with little or no vegetation due to extreme environmental conditions"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.DSRT" ;
+    skos:prefLabel "desert"@en .
+
+gn:T.DUNE a gn:Code ;
+    skos:definition "a wave form, ridge or star shape feature composed of sand"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.DUNE" ;
+    skos:prefLabel "dune(s)"@en .
+
+gn:T.DVD a gn:Code ;
+    skos:definition "a line separating adjacent drainage basins"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.DVD" ;
+    skos:prefLabel "divide"@en .
+
+gn:T.ERG a gn:Code ;
+    skos:definition "an extensive tract of shifting sand and sand dunes"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.ERG" ;
+    skos:prefLabel "sandy desert"@en .
+
+gn:T.FAN a gn:Code ;
+    skos:definition "a fan-shaped wedge of coarse alluvium with apex merging with a mountain stream bed and the fan spreading out at a low angle slope onto an adjacent plain"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.FAN" ;
+    skos:prefLabel "fan(s)"@en .
+
+gn:T.FORD a gn:Code ;
+    skos:definition "a shallow part of a stream which can be crossed on foot or by land vehicle"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.FORD" ;
+    skos:prefLabel "ford"@en .
+
+gn:T.FSR a gn:Code ;
+    skos:definition "a crack associated with volcanism"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.FSR" ;
+    skos:prefLabel "fissure"@en .
+
+gn:T.GAP a gn:Code ;
+    skos:definition "a low place in a ridge, not used for transportation"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.GAP" ;
+    skos:prefLabel "gap"@en .
+
+gn:T.GRGE a gn:Code ;
+    skos:definition "a short, narrow, steep-sided section of a stream valley"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.GRGE" ;
+    skos:prefLabel "gorge(s)"@en .
+
+gn:T.HDLD a gn:Code ;
+    skos:definition "a high projection of land extending into a large body of water beyond the line of the coast"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.HDLD" ;
+    skos:prefLabel "headland"@en .
+
+gn:T.HLL a gn:Code ;
+    skos:definition "a rounded elevation of limited extent rising above the surrounding land with local relief of less than 300m"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.HLL" ;
+    skos:prefLabel "hill"@en .
+
+gn:T.HLLS a gn:Code ;
+    skos:definition "rounded elevations of limited extent rising above the surrounding land with local relief of less than 300m"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.HLLS" ;
+    skos:prefLabel "hills"@en .
+
+gn:T.HMCK a gn:Code ;
+    skos:definition "a patch of ground, distinct from and slightly above the surrounding plain or wetland. Often occurs in groups"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.HMCK" ;
+    skos:prefLabel "hammock(s)"@en .
+
+gn:T.HMDA a gn:Code ;
+    skos:definition "a relatively sand-free, high bedrock plateau in a hot desert, with or without a gravel veneer"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.HMDA" ;
+    skos:prefLabel "rock desert"@en .
+
+gn:T.INTF a gn:Code ;
+    skos:definition "a relatively undissected upland between adjacent stream valleys"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.INTF" ;
+    skos:prefLabel "interfluve"@en .
+
+gn:T.ISL a gn:Code ;
+    skos:definition "a tract of land, smaller than a continent, surrounded by water at high water"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.ISL" ;
+    skos:prefLabel "island"@en .
+
+gn:T.ISLET a gn:Code ;
+    skos:definition "small island, bigger than rock, smaller than island."@en ;
+    skos:historyNote "Added in v3.0"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.ISLET" ;
+    skos:prefLabel "islet"@en .
+
+gn:T.ISLF a gn:Code ;
+    skos:definition "an island created by landfill or diking and filling in a wetland, bay, or lagoon"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.ISLF" ;
+    skos:prefLabel "artificial island"@en .
+
+gn:T.ISLM a gn:Code ;
+    skos:definition "a mangrove swamp surrounded by a waterbody"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.ISLM" ;
+    skos:prefLabel "mangrove island"@en .
+
+gn:T.ISLS a gn:Code ;
+    skos:definition "tracts of land, smaller than a continent, surrounded by water at high water"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.ISLS" ;
+    skos:prefLabel "islands"@en .
+
+gn:T.ISLT a gn:Code ;
+    skos:definition "a coastal island connected to the mainland by barrier beaches, levees or dikes"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.ISLT" ;
+    skos:prefLabel "land-tied island"@en .
+
+gn:T.ISLX a gn:Code ;
+    skos:inScheme gn:T ;
+    skos:notation "T.ISLX" ;
+    skos:prefLabel "section of island"@en .
+
+gn:T.ISTH a gn:Code ;
+    skos:definition "a narrow strip of land connecting two larger land masses and bordered by water"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.ISTH" ;
+    skos:prefLabel "isthmus"@en .
+
+gn:T.KRST a gn:Code ;
+    skos:definition "a distinctive landscape developed on soluble rock such as limestone characterized by sinkholes, caves, disappearing streams, and underground drainage"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.KRST" ;
+    skos:prefLabel "karst area"@en .
+
+gn:T.LAVA a gn:Code ;
+    skos:definition "an area of solidified lava"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.LAVA" ;
+    skos:prefLabel "lava area"@en .
+
+gn:T.LEV a gn:Code ;
+    skos:definition "a natural low embankment bordering a distributary or meandering stream; often built up artificially to control floods"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.LEV" ;
+    skos:prefLabel "levee"@en .
+
+gn:T.MESA a gn:Code ;
+    skos:definition "a flat-topped, isolated elevation with steep slopes on all sides, less extensive than a plateau"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.MESA" ;
+    skos:prefLabel "mesa(s)"@en .
+
+gn:T.MND a gn:Code ;
+    skos:definition "a low, isolated, rounded hill"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.MND" ;
+    skos:prefLabel "mound(s)"@en .
+
+gn:T.MRN a gn:Code ;
+    skos:definition "a mound, ridge, or other accumulation of glacial till"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.MRN" ;
+    skos:prefLabel "moraine"@en .
+
+gn:T.MT a gn:Code ;
+    skos:definition "an elevation standing high above the surrounding area with small summit area, steep slopes and local relief of 300m or more"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.MT" ;
+    skos:prefLabel "mountain"@en .
+
+gn:T.MTS a gn:Code ;
+    skos:definition "a mountain range or a group of mountains or high ridges"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.MTS" ;
+    skos:prefLabel "mountains"@en .
+
+gn:T.NKM a gn:Code ;
+    skos:definition "a narrow strip of land between the two limbs of a meander loop at its narrowest point"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.NKM" ;
+    skos:prefLabel "meander neck"@en .
+
+gn:T.NTK a gn:Code ;
+    skos:definition "a rock or mountain peak protruding through glacial ice"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.NTK" ;
+    skos:prefLabel "nunatak"@en .
+
+gn:T.NTKS a gn:Code ;
+    skos:definition "rocks or mountain peaks protruding through glacial ice"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.NTKS" ;
+    skos:prefLabel "nunataks"@en .
+
+gn:T.PAN a gn:Code ;
+    skos:definition "a near-level shallow, natural depression or basin, usually containing an intermittent lake, pond, or pool"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.PAN" ;
+    skos:prefLabel "pan"@en .
+
+gn:T.PANS a gn:Code ;
+    skos:definition "a near-level shallow, natural depression or basin, usually containing an intermittent lake, pond, or pool"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.PANS" ;
+    skos:prefLabel "pans"@en .
+
+gn:T.PASS a gn:Code ;
+    skos:definition "a break in a mountain range or other high obstruction, used for transportation from one side to the other [See also gap]"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.PASS" ;
+    skos:prefLabel "pass"@en .
+
+gn:T.PEN a gn:Code ;
+    skos:definition "an elongate area of land projecting into a body of water and nearly surrounded by water"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.PEN" ;
+    skos:prefLabel "peninsula"@en .
+
+gn:T.PENX a gn:Code ;
+    skos:inScheme gn:T ;
+    skos:notation "T.PENX" ;
+    skos:prefLabel "section of peninsula"@en .
+
+gn:T.PK a gn:Code ;
+    skos:definition "a pointed elevation atop a mountain, ridge, or other hypsographic feature"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.PK" ;
+    skos:prefLabel "peak"@en .
+
+gn:T.PKS a gn:Code ;
+    skos:definition "pointed elevations atop a mountain, ridge, or other hypsographic features"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.PKS" ;
+    skos:prefLabel "peaks"@en .
+
+gn:T.PLAT a gn:Code ;
+    skos:definition "an elevated plain with steep slopes on one or more sides, and often with incised streams"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.PLAT" ;
+    skos:prefLabel "plateau"@en .
+
+gn:T.PLATX a gn:Code ;
+    skos:inScheme gn:T ;
+    skos:notation "T.PLATX" ;
+    skos:prefLabel "section of plateau"@en .
+
+gn:T.PLDR a gn:Code ;
+    skos:definition "an area reclaimed from the sea by diking and draining"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.PLDR" ;
+    skos:prefLabel "polder"@en .
+
+gn:T.PLN a gn:Code ;
+    skos:definition "an extensive area of comparatively level to gently undulating land, lacking surface irregularities, and usually adjacent to a higher area"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.PLN" ;
+    skos:prefLabel "plain(s)"@en .
+
+gn:T.PLNX a gn:Code ;
+    skos:inScheme gn:T ;
+    skos:notation "T.PLNX" ;
+    skos:prefLabel "section of plain"@en .
+
+gn:T.PROM a gn:Code ;
+    skos:definition "a bluff or prominent hill overlooking or projecting into a lowland"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.PROM" ;
+    skos:prefLabel "promontory(-ies)"@en .
+
+gn:T.PT a gn:Code ;
+    skos:definition "a tapering piece of land projecting into a body of water, less prominent than a cape"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.PT" ;
+    skos:prefLabel "point"@en .
+
+gn:T.PTS a gn:Code ;
+    skos:definition "tapering pieces of land projecting into a body of water, less prominent than a cape"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.PTS" ;
+    skos:prefLabel "points"@en .
+
+gn:T.RDGB a gn:Code ;
+    skos:definition "a ridge of sand just inland and parallel to the beach, usually in series"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.RDGB" ;
+    skos:prefLabel "beach ridge"@en .
+
+gn:T.RDGE a gn:Code ;
+    skos:definition "a long narrow elevation with steep sides, and a more or less continuous crest"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.RDGE" ;
+    skos:prefLabel "ridge(s)"@en .
+
+gn:T.REG a gn:Code ;
+    skos:definition "a desert plain characterized by a surface veneer of gravel and stones"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.REG" ;
+    skos:prefLabel "stony desert"@en .
+
+gn:T.RK a gn:Code ;
+    skos:definition "a conspicuous, isolated rocky mass"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.RK" ;
+    skos:prefLabel "rock"@en .
+
+gn:T.RKFL a gn:Code ;
+    skos:definition "an irregular mass of fallen rock at the base of a cliff or steep slope"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.RKFL" ;
+    skos:prefLabel "rockfall"@en .
+
+gn:T.RKS a gn:Code ;
+    skos:definition "conspicuous, isolated rocky masses"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.RKS" ;
+    skos:prefLabel "rocks"@en .
+
+gn:T.SAND a gn:Code ;
+    skos:definition "a tract of land covered with sand"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.SAND" ;
+    skos:prefLabel "sand area"@en .
+
+gn:T.SBED a gn:Code ;
+    skos:definition "a channel formerly containing the water of a stream"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.SBED" ;
+    skos:prefLabel "dry stream bed"@en .
+
+gn:T.SCRP a gn:Code ;
+    skos:definition "a long line of cliffs or steep slopes separating level surfaces above and below"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.SCRP" ;
+    skos:prefLabel "escarpment"@en .
+
+gn:T.SDL a gn:Code ;
+    skos:definition "a broad, open pass crossing a ridge or between hills or mountains"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.SDL" ;
+    skos:prefLabel "saddle"@en .
+
+gn:T.SHOR a gn:Code ;
+    skos:definition "a narrow zone bordering a waterbody which covers and uncovers at high and low water, respectively"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.SHOR" ;
+    skos:prefLabel "shore"@en .
+
+gn:T.SINK a gn:Code ;
+    skos:definition "a small crater-shape depression in a karst area"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.SINK" ;
+    skos:prefLabel "sinkhole"@en .
+
+gn:T.SLID a gn:Code ;
+    skos:definition "a mound of earth material, at the base of a slope and the associated scoured area"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.SLID" ;
+    skos:prefLabel "slide"@en .
+
+gn:T.SLP a gn:Code ;
+    skos:definition "a surface with a relatively uniform slope angle"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.SLP" ;
+    skos:prefLabel "slope(s)"@en .
+
+gn:T.SPIT a gn:Code ;
+    skos:definition "a narrow, straight or curved continuation of a beach into a waterbody"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.SPIT" ;
+    skos:prefLabel "spit"@en .
+
+gn:T.SPUR a gn:Code ;
+    skos:definition "a subordinate ridge projecting outward from a hill, mountain or other elevation"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.SPUR" ;
+    skos:prefLabel "spur(s)"@en .
+
+gn:T.TAL a gn:Code ;
+    skos:definition "a steep concave slope formed by an accumulation of loose rock fragments at the base of a cliff or steep slope"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.TAL" ;
+    skos:prefLabel "talus slope"@en .
+
+gn:T.TRGD a gn:Code ;
+    skos:definition "a long wind-swept trough between parallel longitudinal dunes"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.TRGD" ;
+    skos:prefLabel "interdune trough(s)"@en .
+
+gn:T.TRR a gn:Code ;
+    skos:definition "a long, narrow alluvial platform bounded by steeper slopes above and below, usually overlooking a waterbody"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.TRR" ;
+    skos:prefLabel "terrace"@en .
+
+gn:T.UPLD a gn:Code ;
+    skos:definition "an extensive interior region of high land with low to moderate surface relief"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.UPLD" ;
+    skos:prefLabel "upland"@en .
+
+gn:T.VAL a gn:Code ;
+    skos:definition "an elongated depression usually traversed by a stream"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.VAL" ;
+    skos:prefLabel "valley"@en .
+
+gn:T.VALG a gn:Code ;
+    skos:definition "a valley the floor of which is notably higher than the valley or shore to which it leads; most common in areas that have been glaciated"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.VALG" ;
+    skos:prefLabel "hanging valley"@en .
+
+gn:T.VALS a gn:Code ;
+    skos:definition "elongated depressions usually traversed by a stream"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.VALS" ;
+    skos:prefLabel "valleys"@en .
+
+gn:T.VALX a gn:Code ;
+    skos:inScheme gn:T ;
+    skos:notation "T.VALX" ;
+    skos:prefLabel "section of valley"@en .
+
+gn:T.VLC a gn:Code ;
+    skos:definition "a conical elevation composed of volcanic materials with a crater at the top"@en ;
+    skos:inScheme gn:T ;
+    skos:notation "T.VLC" ;
+    skos:prefLabel "volcano"@en .
+
+gn:U.APNU a gn:Code ;
+    skos:definition "a gentle slope, with a generally smooth surface, particularly found around groups of islands and seamounts"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.APNU" ;
+    skos:prefLabel "apron"@en .
+
+gn:U.ARCU a gn:Code ;
+    skos:definition "a low bulge around the southeastern end of the island of Hawaii"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.ARCU" ;
+    skos:prefLabel "arch"@en .
+
+gn:U.ARRU a gn:Code ;
+    skos:definition "an area of subdued corrugations off Baja California"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.ARRU" ;
+    skos:prefLabel "arrugado"@en .
+
+gn:U.BDLU a gn:Code ;
+    skos:definition "a region adjacent to a continent, normally occupied by or bordering a shelf, that is highly irregular with depths well in excess of those typical of a shelf"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.BDLU" ;
+    skos:prefLabel "borderland"@en .
+
+gn:U.BKSU a gn:Code ;
+    skos:definition "elevations, typically located on a shelf, over which the depth of water is relatively shallow but sufficient for safe surface navigation"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.BKSU" ;
+    skos:prefLabel "banks"@en .
+
+gn:U.BNCU a gn:Code ;
+    owl:deprecated true ;
+    skos:definition "a small terrace"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.BNCU" ;
+    skos:prefLabel "bench"@en .
+
+gn:U.BNKU a gn:Code ;
+    skos:definition "an elevation, typically located on a shelf, over which the depth of water is relatively shallow but sufficient for safe surface navigation"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.BNKU" ;
+    skos:prefLabel "bank"@en .
+
+gn:U.BSNU a gn:Code ;
+    skos:definition "a depression more or less equidimensional in plan and of variable extent"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.BSNU" ;
+    skos:prefLabel "basin"@en .
+
+gn:U.CDAU a gn:Code ;
+    skos:definition "an entire mountain system including the subordinate ranges, interior plateaus, and basins"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.CDAU" ;
+    skos:prefLabel "cordillera"@en .
+
+gn:U.CNSU a gn:Code ;
+    skos:definition "relatively narrow, deep depressions with steep sides, the bottom of which generally has a continuous slope"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.CNSU" ;
+    skos:prefLabel "canyons"@en .
+
+gn:U.CNYU a gn:Code ;
+    skos:definition "a relatively narrow, deep depression with steep sides, the bottom of which generally has a continuous slope"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.CNYU" ;
+    skos:prefLabel "canyon"@en .
+
+gn:U.CRSU a gn:Code ;
+    skos:definition "a gentle slope rising from oceanic depths towards the foot of a continental slope"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.CRSU" ;
+    skos:prefLabel "continental rise"@en .
+
+gn:U.DEPU a gn:Code ;
+    skos:definition "a localized deep area within the confines of a larger feature, such as a trough, basin or trench"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.DEPU" ;
+    skos:prefLabel "deep"@en .
+
+gn:U.EDGU a gn:Code ;
+    skos:definition "a line along which there is a marked increase of slope at the outer margin of a continental shelf or island shelf"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.EDGU" ;
+    skos:prefLabel "shelf edge"@en .
+
+gn:U.ESCU a gn:Code ;
+    skos:definition "an elongated and comparatively steep slope separating flat or gently sloping areas"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.ESCU" ;
+    skos:prefLabel "escarpment (or scarp)"@en .
+
+gn:U.FANU a gn:Code ;
+    skos:definition "a relatively smooth feature normally sloping away from the lower termination of a canyon or canyon system"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.FANU" ;
+    skos:prefLabel "fan"@en .
+
+gn:U.FLTU a gn:Code ;
+    skos:definition "a small level or nearly level area"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.FLTU" ;
+    skos:prefLabel "flat"@en .
+
+gn:U.FRKU a gn:Code ;
+    owl:deprecated true ;
+    skos:definition "a branch of a canyon or valley"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.FRKU" ;
+    skos:prefLabel "fork"@en .
+
+gn:U.FRSU a gn:Code ;
+    owl:deprecated true ;
+    skos:definition "a branch of a canyon or valley"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.FRSU" ;
+    skos:prefLabel "forks"@en .
+
+gn:U.FRZU a gn:Code ;
+    skos:definition "an extensive linear zone of irregular topography of the sea floor, characterized by steep-sided or asymmetrical ridges, troughs, or escarpments"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.FRZU" ;
+    skos:prefLabel "fracture zone"@en .
+
+gn:U.FURU a gn:Code ;
+    skos:definition "a closed, linear, narrow, shallow depression"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.FURU" ;
+    skos:prefLabel "furrow"@en .
+
+gn:U.GAPU a gn:Code ;
+    skos:definition "a narrow break in a ridge or rise"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.GAPU" ;
+    skos:prefLabel "gap"@en .
+
+gn:U.GLYU a gn:Code ;
+    skos:definition "a small valley-like feature"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.GLYU" ;
+    skos:prefLabel "gully"@en .
+
+gn:U.HLLU a gn:Code ;
+    skos:definition "an elevation rising generally less than 500 meters"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.HLLU" ;
+    skos:prefLabel "hill"@en .
+
+gn:U.HLSU a gn:Code ;
+    skos:definition "elevations rising generally less than 500 meters"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.HLSU" ;
+    skos:prefLabel "hills"@en .
+
+gn:U.HOLU a gn:Code ;
+    skos:definition "a small depression of the sea floor"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.HOLU" ;
+    skos:prefLabel "hole"@en .
+
+gn:U.KNLU a gn:Code ;
+    skos:definition "an elevation rising generally more than 500 meters and less than 1,000 meters and of limited extent across the summit"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.KNLU" ;
+    skos:prefLabel "knoll"@en .
+
+gn:U.KNSU a gn:Code ;
+    skos:definition "elevations rising generally more than 500 meters and less than 1,000 meters and of limited extent across the summits"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.KNSU" ;
+    skos:prefLabel "knolls"@en .
+
+gn:U.LDGU a gn:Code ;
+    skos:definition "a rocky projection or outcrop, commonly linear and near shore"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.LDGU" ;
+    skos:prefLabel "ledge"@en .
+
+gn:U.LEVU a gn:Code ;
+    skos:definition "an embankment bordering a canyon, valley, or seachannel"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.LEVU" ;
+    skos:prefLabel "levee"@en .
+
+gn:U.MDVU a gn:Code ;
+    owl:deprecated true ;
+    skos:definition "the axial depression of the mid-oceanic ridge system"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.MDVU" ;
+    skos:prefLabel "median valley"@en .
+
+gn:U.MESU a gn:Code ;
+    skos:definition "an isolated, extensive, flat-topped elevation on the shelf, with relatively steep sides"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.MESU" ;
+    skos:prefLabel "mesa"@en .
+
+gn:U.MNDU a gn:Code ;
+    skos:definition "a low, isolated, rounded hill"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.MNDU" ;
+    skos:prefLabel "mound"@en .
+
+gn:U.MOTU a gn:Code ;
+    skos:definition "an annular depression that may not be continuous, located at the base of many seamounts, islands, and other isolated elevations"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.MOTU" ;
+    skos:prefLabel "moat"@en .
+
+gn:U.MTSU a gn:Code ;
+    owl:deprecated true ;
+    skos:definition "well-delineated subdivisions of a large and complex positive feature"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.MTSU" ;
+    skos:prefLabel "mountains"@en .
+
+gn:U.MTU a gn:Code ;
+    skos:definition "a well-delineated subdivision of a large and complex positive feature"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.MTU" ;
+    skos:prefLabel "mountain"@en .
+
+gn:U.PKSU a gn:Code ;
+    skos:definition "prominent elevations, part of a larger feature, either pointed or of very limited extent across the summit"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.PKSU" ;
+    skos:prefLabel "peaks"@en .
+
+gn:U.PKU a gn:Code ;
+    skos:definition "a prominent elevation, part of a larger feature, either pointed or of very limited extent across the summit"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.PKU" ;
+    skos:prefLabel "peak"@en .
+
+gn:U.PLFU a gn:Code ;
+    owl:deprecated true ;
+    skos:definition "a flat or gently sloping underwater surface extending seaward from the shore"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.PLFU" ;
+    skos:prefLabel "platform"@en .
+
+gn:U.PLNU a gn:Code ;
+    skos:definition "a flat, gently sloping or nearly level region"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.PLNU" ;
+    skos:prefLabel "plain"@en .
+
+gn:U.PLTU a gn:Code ;
+    skos:definition "a comparatively flat-topped feature of considerable extent, dropping off abruptly on one or more sides"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.PLTU" ;
+    skos:prefLabel "plateau"@en .
+
+gn:U.PNLU a gn:Code ;
+    skos:definition "a high tower or spire-shaped pillar of rock or coral, alone or cresting a summit"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.PNLU" ;
+    skos:prefLabel "pinnacle"@en .
+
+gn:U.PRVU a gn:Code ;
+    skos:definition "a region identifiable by a group of similar physiographic features whose characteristics are markedly in contrast with surrounding areas"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.PRVU" ;
+    skos:prefLabel "province"@en .
+
+gn:U.RAVU a gn:Code ;
+    owl:deprecated true ;
+    skos:definition "a small canyon"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.RAVU" ;
+    skos:prefLabel "ravine"@en .
+
+gn:U.RDGU a gn:Code ;
+    skos:definition "a long narrow elevation with steep sides"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.RDGU" ;
+    skos:prefLabel "ridge"@en .
+
+gn:U.RDSU a gn:Code ;
+    skos:definition "long narrow elevations with steep sides"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.RDSU" ;
+    skos:prefLabel "ridges"@en .
+
+gn:U.RFSU a gn:Code ;
+    skos:definition "surface-navigation hazards composed of consolidated material"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.RFSU" ;
+    skos:prefLabel "reefs"@en .
+
+gn:U.RFU a gn:Code ;
+    skos:definition "a surface-navigation hazard composed of consolidated material"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.RFU" ;
+    skos:prefLabel "reef"@en .
+
+gn:U.RISU a gn:Code ;
+    skos:definition "a broad elevation that rises gently, and generally smoothly, from the sea floor"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.RISU" ;
+    skos:prefLabel "rise"@en .
+
+gn:U.RMPU a gn:Code ;
+    owl:deprecated true ;
+    skos:definition "a gentle slope connecting areas of different elevations"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.RMPU" ;
+    skos:prefLabel "ramp"@en .
+
+gn:U.RNGU a gn:Code ;
+    owl:deprecated true ;
+    skos:definition "a series of associated ridges or seamounts"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.RNGU" ;
+    skos:prefLabel "range"@en .
+
+gn:U.SCNU a gn:Code ;
+    skos:definition "a continuously sloping, elongated depression commonly found in fans or plains and customarily bordered by levees on one or two sides"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.SCNU" ;
+    skos:prefLabel "seachannel"@en .
+
+gn:U.SCSU a gn:Code ;
+    skos:definition "continuously sloping, elongated depressions commonly found in fans or plains and customarily bordered by levees on one or two sides"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.SCSU" ;
+    skos:prefLabel "seachannels"@en .
+
+gn:U.SDLU a gn:Code ;
+    skos:definition "a low part, resembling in shape a saddle, in a ridge or between contiguous seamounts"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.SDLU" ;
+    skos:prefLabel "saddle"@en .
+
+gn:U.SHFU a gn:Code ;
+    skos:definition "a zone adjacent to a continent (or around an island) that extends from the low water line to a depth at which there is usually a marked increase of slope towards oceanic depths"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.SHFU" ;
+    skos:prefLabel "shelf"@en .
+
+gn:U.SHLU a gn:Code ;
+    skos:definition "a surface-navigation hazard composed of unconsolidated material"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.SHLU" ;
+    skos:prefLabel "shoal"@en .
+
+gn:U.SHSU a gn:Code ;
+    skos:definition "hazards to surface navigation composed of unconsolidated material"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.SHSU" ;
+    skos:prefLabel "shoals"@en .
+
+gn:U.SHVU a gn:Code ;
+    skos:definition "a valley on the shelf, generally the shoreward extension of a canyon"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.SHVU" ;
+    skos:prefLabel "shelf valley"@en .
+
+gn:U.SILU a gn:Code ;
+    skos:definition "the low part of a gap or saddle separating basins"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.SILU" ;
+    skos:prefLabel "sill"@en .
+
+gn:U.SLPU a gn:Code ;
+    skos:definition "the slope seaward from the shelf edge to the beginning of a continental rise or the point where there is a general reduction in slope"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.SLPU" ;
+    skos:prefLabel "slope"@en .
+
+gn:U.SMSU a gn:Code ;
+    skos:definition "elevations rising generally more than 1,000 meters and of limited extent across the summit"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.SMSU" ;
+    skos:prefLabel "seamounts"@en .
+
+gn:U.SMU a gn:Code ;
+    skos:definition "an elevation rising generally more than 1,000 meters and of limited extent across the summit"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.SMU" ;
+    skos:prefLabel "seamount"@en .
+
+gn:U.SPRU a gn:Code ;
+    skos:definition "a subordinate elevation, ridge, or rise projecting outward from a larger feature"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.SPRU" ;
+    skos:prefLabel "spur"@en .
+
+gn:U.TERU a gn:Code ;
+    skos:definition "a relatively flat horizontal or gently inclined surface, sometimes long and narrow, which is bounded by a steeper ascending slope on one side and by a steep descending slope on the opposite side"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.TERU" ;
+    skos:prefLabel "terrace"@en .
+
+gn:U.TMSU a gn:Code ;
+    skos:definition "seamounts having a comparatively smooth, flat top"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.TMSU" ;
+    skos:prefLabel "tablemounts (or guyots)"@en .
+
+gn:U.TMTU a gn:Code ;
+    skos:definition "a seamount having a comparatively smooth, flat top"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.TMTU" ;
+    skos:prefLabel "tablemount (or guyot)"@en .
+
+gn:U.TNGU a gn:Code ;
+    skos:definition "an elongate (tongue-like) extension of a flat sea floor into an adjacent higher feature"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.TNGU" ;
+    skos:prefLabel "tongue"@en .
+
+gn:U.TRGU a gn:Code ;
+    skos:definition "a long depression of the sea floor characteristically flat bottomed and steep sided, and normally shallower than a trench"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.TRGU" ;
+    skos:prefLabel "trough"@en .
+
+gn:U.TRNU a gn:Code ;
+    skos:definition "a long, narrow, characteristically very deep and asymmetrical depression of the sea floor, with relatively steep sides"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.TRNU" ;
+    skos:prefLabel "trench"@en .
+
+gn:U.VALU a gn:Code ;
+    skos:definition "a relatively shallow, wide depression, the bottom of which usually has a continuous gradient"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.VALU" ;
+    skos:prefLabel "valley"@en .
+
+gn:U.VLSU a gn:Code ;
+    skos:definition "a relatively shallow, wide depression, the bottom of which usually has a continuous gradient"@en ;
+    skos:inScheme gn:U ;
+    skos:notation "U.VLSU" ;
+    skos:prefLabel "valleys"@en .
+
+gn:V.BUSH a gn:Code ;
+    skos:definition "a small clump of conspicuous bushes in an otherwise bare area"@en ;
+    skos:inScheme gn:V ;
+    skos:notation "V.BUSH" ;
+    skos:prefLabel "bush(es)"@en .
+
+gn:V.CULT a gn:Code ;
+    skos:definition "an area under cultivation"@en ;
+    skos:inScheme gn:V ;
+    skos:notation "V.CULT" ;
+    skos:prefLabel "cultivated area"@en .
+
+gn:V.FRST a gn:Code ;
+    skos:definition "an area dominated by tree vegetation"@en ;
+    skos:inScheme gn:V ;
+    skos:notation "V.FRST" ;
+    skos:prefLabel "forest(s)"@en .
+
+gn:V.FRSTF a gn:Code ;
+    skos:definition "a forest fossilized by geologic processes and now exposed at the earth's surface"@en ;
+    skos:inScheme gn:V ;
+    skos:notation "V.FRSTF" ;
+    skos:prefLabel "fossilized forest"@en .
+
+gn:V.GRSLD a gn:Code ;
+    skos:definition "an area dominated by grass vegetation"@en ;
+    skos:inScheme gn:V ;
+    skos:notation "V.GRSLD" ;
+    skos:prefLabel "grassland"@en .
+
+gn:V.GRVC a gn:Code ;
+    skos:definition "a planting of coconut trees"@en ;
+    skos:inScheme gn:V ;
+    skos:notation "V.GRVC" ;
+    skos:prefLabel "coconut grove"@en .
+
+gn:V.GRVO a gn:Code ;
+    skos:definition "a planting of olive trees"@en ;
+    skos:inScheme gn:V ;
+    skos:notation "V.GRVO" ;
+    skos:prefLabel "olive grove"@en .
+
+gn:V.GRVP a gn:Code ;
+    skos:definition "a planting of palm trees"@en ;
+    skos:inScheme gn:V ;
+    skos:notation "V.GRVP" ;
+    skos:prefLabel "palm grove"@en .
+
+gn:V.GRVPN a gn:Code ;
+    skos:definition "a planting of pine trees"@en ;
+    skos:inScheme gn:V ;
+    skos:notation "V.GRVPN" ;
+    skos:prefLabel "pine grove"@en .
+
+gn:V.HTH a gn:Code ;
+    skos:definition "an upland moor or sandy area dominated by low shrubby vegetation including heather"@en ;
+    skos:inScheme gn:V ;
+    skos:notation "V.HTH" ;
+    skos:prefLabel "heath"@en .
+
+gn:V.MDW a gn:Code ;
+    skos:definition "a small, poorly drained area dominated by grassy vegetation"@en ;
+    skos:inScheme gn:V ;
+    skos:notation "V.MDW" ;
+    skos:prefLabel "meadow"@en .
+
+gn:V.OCH a gn:Code ;
+    skos:definition "a planting of fruit or nut trees"@en ;
+    skos:inScheme gn:V ;
+    skos:notation "V.OCH" ;
+    skos:prefLabel "orchard(s)"@en .
+
+gn:V.SCRB a gn:Code ;
+    skos:definition "an area of low trees, bushes, and shrubs stunted by some environmental limitation"@en ;
+    skos:inScheme gn:V ;
+    skos:notation "V.SCRB" ;
+    skos:prefLabel "scrubland"@en .
+
+gn:V.TREE a gn:Code ;
+    skos:definition "a conspicuous tree used as a landmark"@en ;
+    skos:inScheme gn:V ;
+    skos:notation "V.TREE" ;
+    skos:prefLabel "tree(s)"@en .
+
+gn:V.TUND a gn:Code ;
+    skos:definition "a marshy, treeless, high latitude plain, dominated by mosses, lichens, and low shrub vegetation under permafrost conditions"@en ;
+    skos:inScheme gn:V ;
+    skos:notation "V.TUND" ;
+    skos:prefLabel "tundra"@en .
+
+gn:V.VIN a gn:Code ;
+    skos:definition "a planting of grapevines"@en ;
+    skos:inScheme gn:V ;
+    skos:notation "V.VIN" ;
+    skos:prefLabel "vineyard"@en .
+
+gn:V.VINS a gn:Code ;
+    skos:definition "plantings of grapevines"@en ;
+    skos:inScheme gn:V ;
+    skos:notation "V.VINS" ;
+    skos:prefLabel "vineyards"@en .
+
+gn:childrenFeatures a owl:ObjectProperty ;
+    rdfs:label "children features"@en ;
+    rdfs:comment "Links to an RDF document containing the descriptions of children features"@en ;
+    rdfs:domain gn:Feature ;
+    rdfs:range gn:RDFData .
+
+gn:colloquialName a owl:DatatypeProperty ;
+    rdfs:label "colloquial name"@en ;
+    rdfs:subPropertyOf gn:alternateName .
+
+gn:historicalName a owl:DatatypeProperty ;
+    rdfs:label "historical name"@en ;
+    rdfs:subPropertyOf gn:alternateName .
+
+gn:locatedIn a owl:ObjectProperty ;
+    rdfs:label "located in"@en ;
+    rdfs:comment "Indicates that the subject resource is located in the object feature"@en ;
+    rdfs:range gn:Feature .
+
+gn:locationMap a owl:ObjectProperty ;
+    rdfs:label "map"@en ;
+    rdfs:comment "A geonames map centered on the feature."@en ;
+    rdfs:domain gn:Feature ;
+    rdfs:range gn:Map .
+
+gn:nearby a owl:ObjectProperty ;
+    rdfs:label "nearby"@en ;
+    rdfs:comment "A feature close to the reference feature"@en ;
+    rdfs:domain gn:Feature ;
+    rdfs:range gn:Feature .
+
+gn:nearbyFeatures a owl:ObjectProperty ;
+    rdfs:label "nearby features"@en ;
+    rdfs:comment "Links to an RDF document containing the descriptions of nearby features"@en ;
+    rdfs:domain gn:Feature ;
+    rdfs:range gn:RDFData .
+
+gn:neighbour a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "neighbour"@en ;
+    rdfs:comment "A feature sharing a common boarder with the reference feature"@en ;
+    rdfs:domain gn:Feature ;
+    rdfs:range gn:Feature .
+
+gn:neighbouringFeatures a owl:ObjectProperty ;
+    rdfs:label "neighbouring features"@en ;
+    rdfs:comment "Links to an RDF document containing the descriptions of neighbouring features. Applies when the feature has definite boarders."@en ;
+    rdfs:domain gn:Feature ;
+    rdfs:range gn:RDFData .
+
+gn:officialName a owl:DatatypeProperty ;
+    rdfs:label "official name"@en ;
+    rdfs:comment "A name in an official local language"@en ;
+    rdfs:domain gn:Feature ;
+    rdfs:subPropertyOf skos:prefLabel .
+
+gn:parentCountry a owl:ObjectProperty ;
+    rdfs:label "parent country"@en ;
+    rdfs:domain gn:Feature ;
+    rdfs:range [ a owl:Restriction ;
+            owl:hasValue gn:A.PCLI ;
+            owl:onProperty gn:featureCode ],
+        [ a owl:Restriction ;
+            owl:hasValue gn:A.PCLI ;
+            owl:onProperty gn:featureCode ] ;
+    rdfs:subPropertyOf gn:parentFeature .
+
+gn:postalCode a owl:DatatypeProperty ;
+    rdfs:label "postal code"@en ;
+    rdfs:domain gn:Feature .
+
+gn:shortName a owl:DatatypeProperty ;
+    rdfs:label "short name"@en ;
+    rdfs:domain gn:Feature ;
+    rdfs:subPropertyOf gn:alternateName .
+
+gn:wikipediaArticle a owl:ObjectProperty ;
+    rdfs:label "wikipedia article"@en ;
+    rdfs:comment "A Wikipedia article of which subject is the resource."@en ;
+    rdfs:domain gn:Feature ;
+    rdfs:range gn:WikipediaArticle .
+
+<http://www.ontologyportal.org/SUMO.owl#UnitedNations> owl:sameAs <http://yago-knowledge.org/resource/United_Nations> .
+
+skos:notation a owl:DatatypeProperty ;
+    rdfs:label "notation"@en ;
+    rdfs:comment "Used to store the values of feature codes"@en .
+
+foaf:name a owl:DatatypeProperty .
+
+<http://data.semanticweb.org/person/bernard-vatant> a foaf:Person ;
+    foaf:name "Bernard Vatant" ;
+    foaf:page <http://blog.hubjects.com> ;
+    foaf:workplaceHomepage <http://www.mondeca.com> .
+
+<http://dbpedia.org/resource/GeoNames> a foaf:Organization ;
+    mrel:dtm gn:Marc-Wick ;
+    foaf:homepage <http://www.geonames.org> ;
+    foaf:name "GeoNames" .
+
+<http://dbpedia.org/resource/Kathmandu> owl:sameAs <http://yago-knowledge.org/resource/Kathmandu> .
+
+<http://sws.geonames.org/1282988/about.rdf> a foaf:Document ;
+    cc:attributionName "GeoNames"^^xsd:string ;
+    cc:attributionURL <http://sws.geonames.org/1282988/> ;
+    cc:license <http://creativecommons.org/licenses/by/3.0/> ;
+    dcterms:created "2006-01-15"^^xsd:date ;
+    dcterms:modified "2013-03-05"^^xsd:date ;
+    foaf:primaryTopic <http://sws.geonames.org/1282988/> .
+
+<http://sws.geonames.org/1283240/about.rdf> a foaf:Document ;
+    cc:attributionName "GeoNames"^^xsd:string ;
+    cc:attributionURL <http://sws.geonames.org/1283240/> ;
+    cc:license <http://creativecommons.org/licenses/by/3.0/> ;
+    dcterms:created "2006-01-15"^^xsd:date ;
+    dcterms:modified "2015-03-20"^^xsd:date ;
+    foaf:primaryTopic <http://sws.geonames.org/1283240/> .
+
+<http://sws.geonames.org/1283710/about.rdf> a foaf:Document ;
+    cc:attributionName "GeoNames"^^xsd:string ;
+    cc:attributionURL <http://sws.geonames.org/1283710/> ;
+    cc:license <http://creativecommons.org/licenses/by/3.0/> ;
+    dcterms:created "2006-01-15"^^xsd:date ;
+    dcterms:modified "2011-03-10"^^xsd:date ;
+    foaf:primaryTopic <http://sws.geonames.org/1283710/> .
+
+<http://sws.geonames.org/7289707/about.rdf> a foaf:Document ;
+    cc:attributionName "GeoNames"^^xsd:string ;
+    cc:attributionURL <http://sws.geonames.org/7289707/> ;
+    cc:license <http://creativecommons.org/licenses/by/3.0/> ;
+    dcterms:created "2010-05-02"^^xsd:date ;
+    dcterms:modified "2014-02-07"^^xsd:date ;
+    foaf:primaryTopic <http://sws.geonames.org/7289707/> .
+
+gn:Map a owl:Class ;
+    rdfs:label "Map"@en ;
+    rdfs:comment "A Web page displaying a map"@en ;
+    rdfs:subClassOf foaf:Document .
+
+gn:Marc-Wick a foaf:Person ;
+    foaf:name "Marc Wick" .
+
+gn:P.PPLC a gn:Code ;
+    skos:inScheme gn:P ;
+    skos:notation "P.PPLC" ;
+    skos:prefLabel "capital of a political entity"@en .
+
+gn:WikipediaArticle a owl:Class ;
+    rdfs:label "Wikipedia Article"@en ;
+    rdfs:comment "A Wikipedia article"@en ;
+    rdfs:subClassOf foaf:Document .
+
+skos:prefLabel a owl:DatatypeProperty .
+
+gn:A.ADM3 a gn:Code ;
+    skos:definition "a subdivision of a second-order administrative division"@en ;
+    skos:inScheme gn:A ;
+    skos:notation "A.ADM3" ;
+    skos:prefLabel "third-order administrative division"@en .
+
+gn:A.ADM4 a gn:Code ;
+    skos:definition "a subdivision of a third-order administrative division"@en ;
+    skos:inScheme gn:A ;
+    skos:notation "A.ADM4" ;
+    skos:prefLabel "fourth-order administrative division"@en .
+
+gn:countryCode a owl:DatatypeProperty ;
+    rdfs:label "ISO country code"@en ;
+    rdfs:comment "A two letters country code in the ISO 3166 list"@en,
+        "The countryCode value for a Geoname Feature is equal to the countryCode value of the parentCountry value."@en ;
+    rdfs:domain gn:Feature .
+
+gn:featureClass a owl:ObjectProperty ;
+    rdfs:label "feature class"@en ;
+    rdfs:comment "The main category of the feature, as defined in geonames taxonomy."@en ;
+    rdfs:domain gn:Feature ;
+    rdfs:range gn:Class ;
+    rdfs:subPropertyOf dcterms:type ;
+    owl:propertyChainAxiom ( gn:featureCode skos:inScheme ),
+        ( gn:featureCode skos:inScheme ) .
+
+gn:geonamesID a owl:DatatypeProperty ;
+    rdfs:label "geonames identifier"@en ;
+    rdfs:subPropertyOf dcterms:identifier ;
+    skos:historyNote "Added in version 3.1"@en .
+
+gn:name a owl:DatatypeProperty ;
+    rdfs:label "name"@en ;
+    rdfs:comment "The main international name of a feature. The value has no xml:lang tag."@en ;
+    rdfs:domain gn:Feature .
+
+gn:parentADM1 a owl:ObjectProperty ;
+    rdfs:label "level 1 administrative parent"@en ;
+    rdfs:domain gn:Feature ;
+    rdfs:range [ a owl:Restriction ;
+            owl:hasValue gn:A.ADM1 ;
+            owl:onProperty gn:featureCode ],
+        [ a owl:Restriction ;
+            owl:hasValue gn:A.ADM1 ;
+            owl:onProperty gn:featureCode ] ;
+    rdfs:subPropertyOf gn:parentFeature .
+
+gn:parentADM2 a owl:ObjectProperty ;
+    rdfs:label "level 2 administrative parent"@en ;
+    rdfs:domain gn:Feature ;
+    rdfs:range [ a owl:Restriction ;
+            owl:hasValue gn:A.ADM2 ;
+            owl:onProperty gn:featureCode ],
+        [ a owl:Restriction ;
+            owl:hasValue gn:A.ADM2 ;
+            owl:onProperty gn:featureCode ] ;
+    rdfs:subPropertyOf gn:parentFeature .
+
+gn:parentADM3 a owl:ObjectProperty ;
+    rdfs:label "level 3 administrative parent"@en ;
+    rdfs:domain gn:Feature ;
+    rdfs:range [ a owl:Restriction ;
+            owl:hasValue gn:A.ADM3 ;
+            owl:onProperty gn:featureCode ],
+        [ a owl:Restriction ;
+            owl:hasValue gn:A.ADM3 ;
+            owl:onProperty gn:featureCode ] ;
+    rdfs:subPropertyOf gn:parentFeature .
+
+gn:parentADM4 a owl:ObjectProperty ;
+    rdfs:label "level 4 administrative parent"@en ;
+    rdfs:domain gn:Feature ;
+    rdfs:range [ a owl:Restriction ;
+            owl:hasValue gn:A.ADM4 ;
+            owl:onProperty gn:featureCode ],
+        [ a owl:Restriction ;
+            owl:hasValue gn:A.ADM4 ;
+            owl:onProperty gn:featureCode ] ;
+    rdfs:subPropertyOf gn:parentFeature .
+
+gn:population a owl:DatatypeProperty ;
+    rdfs:label "population"@en ;
+    rdfs:domain gn:Feature ;
+    rdfs:range xsd:integer .
+
+gn:A.ADM1 a gn:Code ;
+    skos:definition "a primary administrative division of a country, such as a state in the United States"@en ;
+    skos:inScheme gn:A ;
+    skos:notation "A.ADM1" ;
+    skos:prefLabel "first-order administrative division"@en .
+
+gn:A.ADM2 a gn:Code ;
+    skos:definition "a subdivision of a first-order administrative division"@en ;
+    skos:inScheme gn:A ;
+    skos:notation "A.ADM2" ;
+    skos:prefLabel "second-order administrative division"@en .
+
+gn:A.PCLI a gn:Code ;
+    skos:inScheme gn:A ;
+    skos:notation "A.PCLI" ;
+    skos:prefLabel "independent political entity"@en .
+
+gn:RDFData a owl:Class ;
+    rdfs:label "RDF Data"@en ;
+    rdfs:comment "A Document containing RDF description of one or several features."@en ;
+    rdfs:subClassOf foaf:Document .
+
+gn:alternateName a owl:DatatypeProperty ;
+    rdfs:domain gn:Feature ;
+    rdfs:subPropertyOf skos:altLabel .
+
+<http://sws.geonames.org/1283710/> a gn:Feature ;
+    gn:alternateName "Bāgmatī",
+        "Bāgmatī Añchal",
+        "Bāgmatī Zone" ;
+    gn:childrenFeatures <http://sws.geonames.org/1283710/contains.rdf> ;
+    gn:countryCode "NP" ;
+    gn:featureClass gn:A ;
+    gn:featureCode gn:A.ADM2 ;
+    gn:locationMap <http://www.geonames.org/1283710/bagmati-zone.html> ;
+    gn:name "Bāgmatī Zone" ;
+    gn:parentADM1 <http://sws.geonames.org/7289707/> ;
+    gn:parentCountry <http://sws.geonames.org/1282988/> ;
+    gn:parentFeature <http://sws.geonames.org/7289707/> ;
+    gn:wikipediaArticle <http://en.wikipedia.org/wiki/Bagmati_Zone> ;
+    rdfs:isDefinedBy <http://sws.geonames.org/1283710/about.rdf> ;
+    rdfs:seeAlso <http://dbpedia.org/resource/Bagmati_Zone> ;
+    wgs84_pos:lat "27.91667" ;
+    wgs84_pos:long "85.41667" .
+
+<http://sws.geonames.org/7289707/> a gn:Feature ;
+    gn:childrenFeatures <http://sws.geonames.org/7289707/contains.rdf> ;
+    gn:countryCode "NP" ;
+    gn:featureClass gn:A ;
+    gn:featureCode gn:A.ADM1 ;
+    gn:locationMap <http://www.geonames.org/7289707/madhyamanchal.html> ;
+    gn:name "Central Region" ;
+    gn:officialName "Central Region"@en ;
+    gn:parentCountry <http://sws.geonames.org/1282988/> ;
+    gn:parentFeature <http://sws.geonames.org/1282988/> ;
+    gn:population "8031629" ;
+    gn:wikipediaArticle <http://en.wikipedia.org/wiki/Central_Region,_Nepal> ;
+    rdfs:isDefinedBy <http://sws.geonames.org/7289707/about.rdf> ;
+    rdfs:seeAlso <http://dbpedia.org/resource/Central_Region%2C_Nepal> ;
+    wgs84_pos:lat "27.45436" ;
+    wgs84_pos:long "85.22301" .
+
+gn:parentFeature a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:label "parent feature"@en ;
+    rdfs:comment "A feature parent of the current one, in either administrative or physical subdivision."@en ;
+    rdfs:domain gn:Feature ;
+    rdfs:range gn:Feature .
+
+<http://sws.geonames.org/1282988/> a gn:Feature ;
+    gn:alternateName "Kingdom of Nepal",
+        "Nepal",
+        "State of Nepal",
+        "Federal Democratic Republic of Nepal"@en ;
+    gn:childrenFeatures <http://sws.geonames.org/1282988/contains.rdf> ;
+    gn:countryCode "NP" ;
+    gn:featureClass gn:A ;
+    gn:featureCode gn:A.PCLI ;
+    gn:locationMap <http://www.geonames.org/1282988/federal-democratic-republic-of-nepal.html> ;
+    gn:name "Nepal" ;
+    gn:neighbouringFeatures <http://sws.geonames.org/1282988/neighbours.rdf> ;
+    gn:parentFeature <http://sws.geonames.org/6255147/> ;
+    gn:population "28951852" ;
+    gn:shortName "Nepal"@en ;
+    gn:wikipediaArticle <http://en.wikipedia.org/wiki/Nepal> ;
+    rdfs:isDefinedBy <http://sws.geonames.org/1282988/about.rdf> ;
+    rdfs:seeAlso <http://dbpedia.org/resource/Nepal> ;
+    wgs84_pos:lat "28" ;
+    wgs84_pos:long "84" .
+
+gn:Class a owl:Class ;
+    rdfs:label "Class"@en ;
+    rdfs:comment "A class of features."@en ;
+    rdfs:subClassOf skos:ConceptScheme .
+
+<http://sws.geonames.org/1283240/> a gn:Feature ;
+    gn:alternateName "Kantipur",
+        "Kantipura",
+        "Katmandu",
+        "Khatmandu",
+        "Kathmandu"@en ;
+    gn:countryCode "NP" ;
+    gn:featureClass gn:P ;
+    gn:featureCode gn:P.PPLC ;
+    gn:locationMap <http://www.geonames.org/1283240/kathmandu.html> ;
+    gn:name "Kathmandu" ;
+    gn:nearbyFeatures <http://sws.geonames.org/1283240/nearby.rdf> ;
+    gn:parentADM1 <http://sws.geonames.org/7289707/> ;
+    gn:parentADM2 <http://sws.geonames.org/1283710/> ;
+    gn:parentCountry <http://sws.geonames.org/1282988/> ;
+    gn:parentFeature <http://sws.geonames.org/1283710/> ;
+    gn:population "1442271" ;
+    gn:wikipediaArticle <http://en.wikipedia.org/wiki/Kathmandu>,
+        <http://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D1%82%D0%BC%D0%B0%D0%BD%D0%B4%D1%83> ;
+    rdfs:isDefinedBy <http://sws.geonames.org/1283240/about.rdf> ;
+    rdfs:seeAlso <http://dbpedia.org/resource/Kathmandu> ;
+    wgs84_pos:alt "1317" ;
+    wgs84_pos:lat "27.70169" ;
+    wgs84_pos:long "85.3206" .
+
+gn:featureCode a owl:ObjectProperty ;
+    rdfs:label "feature code"@en ;
+    rdfs:comment "Type of the feature, as defined in geonames taxonomy."@en ;
+    rdfs:domain gn:Feature ;
+    rdfs:range gn:Code ;
+    rdfs:subPropertyOf dcterms:type .
+
+gn:V a gn:Class ;
+    rdfs:comment "forest, heath, ..."@en .
+
+gn:P a gn:Class ;
+    rdfs:comment "city, village,..."@en .
+
+gn:R a gn:Class ;
+    rdfs:comment "road, railroad, ..."@en .
+
+gn:A a gn:Class ;
+    rdfs:comment "country, state, region ..."@en .
+
+gn:Feature a owl:Class ;
+    rdfs:label "Feature"@en ;
+    rdfs:comment "A geographical feature"@en ;
+    rdfs:subClassOf <http://schema.org/Place>,
+        wgs84_pos:SpatialThing ;
+    owl:equivalentClass <http://geovocab.org/spatial#Feature>,
+        <http://www.mindswap.org/2003/owl/geo/geoFeatures20040307.owl#GeographicFeature> ;
+    skos:historyNote "Modified in version 3.1 : The cardinality constraints on feature code, feature class are relaxed on this class, and put on the specific subclass Geonames Feature. This class and attached properties can therefore be used for features not necessarily identified in the Geoanmes data base"@en .
+
+gn:L a gn:Class ;
+    rdfs:comment "parks,area, ..."@en .
+
+gn:U a gn:Class ;
+    rdfs:comment "undersea"@en .
+
+gn:T a gn:Class ;
+    rdfs:comment "mountain, hill, rock, ..."@en .
+
+gn:H a gn:Class ;
+    rdfs:comment "stream, lake, ..."@en .
+
+gn:S a gn:Class ;
+    rdfs:comment "spot, building, farm, ..."@en .
+
+gn:Code a owl:Class ;
+    rdfs:label "Code"@en ;
+    rdfs:comment "A feature code."@en ;
+    rdfs:subClassOf skos:Concept .
+
