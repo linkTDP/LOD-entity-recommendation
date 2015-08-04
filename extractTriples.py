@@ -11,7 +11,6 @@ from SPARQLWrapper import SPARQLWrapper, XML, JSON
 import traceback
 from pprint import pprint
 import mongoKnoesis
-import urllib2
 import time
 import random
 import itertools
@@ -484,7 +483,7 @@ url3 = "http://www.nytimes.com/2015/07/31/world/middleeast/us-trained-islamic-st
 
 #print getAnnotation(getTextArticleByUrl(url3))
 
-testDbpediaCOnnectedNodes(3)
+#testDbpediaCOnnectedNodes(3)
 
 #hibridExtraction(knoesis.mongoKnoesis.getArticleById(1)['entitySet'])
 
