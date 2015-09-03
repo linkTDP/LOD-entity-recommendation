@@ -181,6 +181,10 @@ class QueryGenerator:
         body=body+" }"
         return Query(header,body,params)
     
+    def queryEntityPageIdWiki(self):
+        return Query(("SELECT ?s ?id "),(" wHERE {?s <http://dbpedia.org/ontology/wikiPageID> ?id.}" ),['?s','?id'])
+    
+    
     def getConnectedObj2(self,distance,source,target):
         queryList=[]
         # firast way
@@ -273,11 +277,73 @@ class QueryGenerator:
             queryList.append((Query(header,body2,params),current2))
         return queryList
     
+    def getArraiesDirection(self,step):
+        params=[]
+        go=[]
+        back=[]
+        for a in range(step+1):
+            go.append(True)
+            back.append(False)
+        params.append(go)
+        params.append(back)
+        for p in range(step):
+            go = []
+            back = [] 
+            for a in range(step+1):
+                if a < p+1:
+                    go.append(True)
+                    back.append(False)
+                else:
+                    go.append(False)
+                    back.append(True)
+            params.append(go)
+            params.append(back)
+        return params
+    
+    def getConnectedObjMysqlInfobox(self,step,source,target):
+        queryList=[]
+        # firast way
+        params=self.getArraiesDirection(step)
+        for p in params:
+            sel="SELECT "+" ".join(map(lambda x: "i"+str(x)+"."+("s ," if p[x] else "o ,"),range(len(p))))+" i"+str(len(p)-1)+"."+("o " if p[-1] else "s ")
+            fr=" FROM infobox as i0"+" ".join(map(lambda x: " join infobox as i"+str(x+1)+" on i"+str(x)+"."+("o" if p[x] else "s")+" = i"+str(x+1)+"."+("s" if p[x+1] else "o "),range(len(p)-1)))
+            where= " WHERE i0."+("s" if p[0] else "o")+" = '"+source+"' AND i"+str(len(p)-1)+"."+("o" if p[-1] else "s")+" = '"+target+"' "
+            #print p
+            query = " ".join([sel,fr,where])
+            queryList.append((query,p))
+        return queryList
+        #second way
+
+    def getConnectedObjMysqlWikiLinks(self,step,source,target):
+        queryList=[]
+        # firast way
+        params=self.getArraiesDirection(step)
+        for p in params:
+            sel="SELECT "+" ".join(map(lambda x: "i"+str(x)+"."+("page_id_source ," if p[x] else "page_id_target ,"),range(len(p))))+" i"+str(len(p)-1)+"."+("page_id_target " if p[-1] else "page_id_source ")
+            fr=" FROM pl as i0"+" ".join(map(lambda x: " join pl as i"+str(x+1)+" on i"+str(x)+"."+("page_id_target" if p[x] else "page_id_source")+" = i"+str(x+1)+"."+("page_id_source " if p[x+1] else "page_id_target "),range(len(p)-1)))
+            where= " WHERE i0."+("page_id_source" if p[0] else "page_id_target")+" = "+str(source)+" AND i"+str(len(p)-1)+"."+("page_id_target" if p[-1] else "page_id_source")+" = "+str(target)+" "
+            #print p
+            query = " ".join([sel,fr,where])
+            queryList.append((query,p))
+        return queryList        
+    
+    def getIdsPagesFromEntity(self,e):
+        return "SELECT page_id from page WHERE dbpedia ='"+e+"' LIMIT 1"
+    
+    def getIdsEntityFromPageID(self,e):
+        return "SELECT dbpedia from page WHERE page_id ="+str(e)+" LIMIT 1"
+    
+    def getAbstractFromEntity(self,e):
+        return "SELECT ?l WHERE {<"+str(e)+"> <http://www.dbpedia.org/ontology/abstract> ?l} "
+    
+    
+    
+    
 def main():
     q = QueryGenerator()
     
-    for a in q.getVoidQuery():
-        pprint.pprint(a.query)
+    for a in q.getConnectedObj2(2, 'source', 'target'):
+        pprint.pprint(a[0].query)
     
     
 if __name__ == '__main__':

@@ -11,6 +11,7 @@ from SPARQLWrapper import SPARQLWrapper, XML, JSON
 import traceback
 from pprint import pprint
 import mongoKnoesis
+
 import time
 import random
 import itertools
@@ -469,6 +470,8 @@ def testDbpediaCOnnectedNodes(id):
     print "total triples : "+str(len(graph))
     timestr = time.strftime("%Y%m%d-%H%M%S")
     graph.serialize(destination='files/connect'+str(id)+'_'+timestr+'.ttl', format='turtle')
+
+
 
 source = 'http://dbpedia.org/resource/Scuderia_Ferrari'
 target = 'http://dbpedia.org/resource/Modena'
